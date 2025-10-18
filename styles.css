@@ -681,3 +681,38 @@ section.resume-section {
 .dev-icons {
     font-size: 3rem;
 }
+
+/* --- SIDEBAR OVERLAY --- */
+.sidebar-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1020;
+    transition: opacity 0.3s ease;
+}
+
+/* Prevent body scroll when sidebar is open */
+body.sidebar-open {
+    overflow: hidden;
+}
+
+/* Mobile sidebar styles */
+@media (max-width: 991px) {
+    #sideNav .navbar-collapse.show {
+        position: fixed;
+        top: 54px;
+        left: 0;
+        width: 80%;
+        max-width: 300px;
+        height: calc(100vh - 54px);
+        background-color: var(--main-color);
+        z-index: 1025;
+        overflow-y: auto;
+        padding: 1rem;
+        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+    }
+}

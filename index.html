@@ -42,7 +42,7 @@
                 });
             });
 
-            // Touch events for swipe to close
+            // Touch events for swipe to close navbar
             let touchStartX = 0;
             navbarCollapse.addEventListener('touchstart', function(e) {
                 touchStartX = e.touches[0].clientX;
@@ -56,6 +56,50 @@
                 if (diffX > 50) {
                     const bsCollapse = new bootstrap.Collapse(navbarCollapse, {toggle: false});
                     bsCollapse.hide();
+                }
+            }, {passive: true});
+
+            // Swipe navigation for home section (and all sections)
+            const sections = ['about', 'experience', 'education', 'skills', 'work'];
+            let touchStartXSection = 0;
+            let touchStartYSection = 0;
+            
+            document.body.addEventListener('touchstart', function(e) {
+                touchStartXSection = e.touches[0].clientX;
+                touchStartYSection = e.touches[0].clientY;
+            }, {passive: true});
+
+            document.body.addEventListener('touchend', function(e) {
+                const touchEndX = e.changedTouches[0].clientX;
+                const touchEndY = e.changedTouches[0].clientY;
+                const diffX = touchStartXSection - touchEndX;
+                const diffY = touchStartYSection - touchEndY;
+                
+                // Only trigger if horizontal swipe is more significant than vertical
+                if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 80) {
+                    // Get current section
+                    let currentSectionIndex = -1;
+                    for (let i = 0; i < sections.length; i++) {
+                        const section = document.getElementById(sections[i]);
+                        const rect = section.getBoundingClientRect();
+                        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+                            currentSectionIndex = i;
+                            break;
+                        }
+                    }
+                    
+                    if (currentSectionIndex !== -1) {
+                        // Swipe left - go to next section
+                        if (diffX > 0 && currentSectionIndex < sections.length - 1) {
+                            const nextSection = document.getElementById(sections[currentSectionIndex + 1]);
+                            nextSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                        // Swipe right - go to previous section
+                        else if (diffX < 0 && currentSectionIndex > 0) {
+                            const prevSection = document.getElementById(sections[currentSectionIndex - 1]);
+                            prevSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                    }
                 }
             }, {passive: true});
         });
@@ -453,7 +497,7 @@
                 sidebarOverlay.style.display = 'none';
             }
             
-            // Event listeners
+            // Event listeners - hamburger menu toggles (opens and closes) the sidebar
             if (navbarToggler) {
                 navbarToggler.addEventListener('click', function(e) {
                     e.preventDefault();
@@ -495,10 +539,6 @@
             
             window.addEventListener('resize', handleResize);
             
-            // Mobile navigation functionality
-            const navbarToggler = document.querySelector('.navbar-toggler');
-            const navbarCollapse = document.getElementById('navbarResponsive');
-
             // Smooth scrolling for anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function(e) {
