@@ -5,15 +5,15 @@
 
 /* --- COLORS (Change these to customize) --- */
 :root {
-    --main-color: #bd5d38;
+    --main-color: #393939;
     /* Main orange color */
-    --main-dark: #974a2d;
+    --main-dark: #28282836;
     /* Darker orange */
     --text-color: #6c757d;
     /* Gray text */
     --heading-color: #343a40;
     /* Dark gray headings */
-    --light-bg: #f8f9fa;
+    --light-bg: #5e5e5e;
     /* Light background */
 }
 
@@ -61,8 +61,13 @@ html {
 }
 
 @keyframes zoom {
-    from {transform: scale(0.9);}
-    to {transform: scale(1);}
+    from {
+        transform: scale(0.9);
+    }
+
+    to {
+        transform: scale(1);
+    }
 }
 
 .close-modal {
@@ -515,7 +520,7 @@ hr {
     justify-content: center;
     height: 3.5rem;
     width: 3.5rem;
-    background-color: #495057;
+    background-color: var(--main-color);
     color: white;
     border-radius: 50%;
     font-size: 1.5rem;
@@ -527,8 +532,15 @@ hr {
     margin-right: 0;
 }
 
+.social-icon {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
 .social-icon:hover {
+    transform: scale(1.1);
     background-color: var(--main-color);
+    color: white !important;
+    opacity: 0.9;
 }
 
 /* --- FONT AWESOME LIST ICONS --- */

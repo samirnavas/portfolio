@@ -95,17 +95,24 @@
                     Samir
                     <span class="text-primary">Navas</span>
                 </h1>
-                <div class="subheading mb-5">
+                <!-- <div class="subheading mb-5">
                     <a href="mailto:samirnavas7662@gmail.com">samirnavas7662@gmail.com</a> |
                     +91 9446583084
-                </div>
+                </div> -->
                 <p class="lead mb-5">Flexible and passionate design enthusiast with hands-on experience in
                     freelance design projects. Currently pursuing B-Tech (Second Year) and eager
                     to contribute creative solutions and user-centered designs to impactful digital products.
                 </p>
                 <div class="social-icons">
-                    <a class="social-icon" href="https://github.com/samirnavas" target="_blank"><i
-                            class="fab fa-github"></i></a>
+                    <a class="social-icon" href="https://github.com/samirnavas" target="_blank" title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="social-icon" href="#" onclick="window.location.href='mailto:samirnavas7662@gmail.com'; return false;" title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a class="social-icon" href="tel:+919446583084" title="Call">
+                        <i class="fas fa-phone-alt"></i>
+                    </a>
                 </div>
             </div>
         </section>
@@ -324,39 +331,39 @@
         const modal = document.getElementById('imageModal');
         const modalImg = document.getElementById('modalImage');
         const captionText = document.getElementById('modalCaption');
-        
+
         // Get all photo items
         const photoItems = document.querySelectorAll('.photo-item');
-        
+
         // Add click event to each photo item
         photoItems.forEach(item => {
             const img = item.querySelector('img');
             const caption = item.querySelector('.photo-caption');
-            
-            item.addEventListener('click', function() {
+
+            item.addEventListener('click', function () {
                 modal.style.display = 'block';
                 modalImg.src = img.src;
                 captionText.innerHTML = caption.innerHTML;
                 document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
             });
         });
-        
+
         // Close modal when clicking the X
-        document.querySelector('.close-modal').onclick = function() {
+        document.querySelector('.close-modal').onclick = function () {
             modal.style.display = 'none';
             document.body.style.overflow = 'auto'; // Re-enable scrolling
         }
-        
+
         // Close modal when clicking outside the image
-        window.onclick = function(event) {
+        window.onclick = function (event) {
             if (event.target == modal) {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Re-enable scrolling
             }
         }
-        
+
         // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
+        document.addEventListener('keydown', function (event) {
             if (event.key === 'Escape' && modal.style.display === 'block') {
                 modal.style.display = 'none';
                 document.body.style.overflow = 'auto'; // Re-enable scrolling
