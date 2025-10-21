@@ -40,11 +40,15 @@ html {
     padding: 15px;
     box-sizing: border-box;
     text-align: center;
-    display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     width: 100vw;
+}
+
+/* Show modal as flex when visible */
+.modal[style*="display: block"] {
+    display: flex !important;
 }
 
 /* Adjust modal position when sidebar is visible (large screens) */
@@ -76,19 +80,16 @@ html {
 @media (max-width: 768px) {
     .modal {
         padding: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        min-height: 100vh;
-        width: 100vw;
+        left: 0 !important;
+        width: 100vw !important;
     }
     
     .modal-content {
-        max-width: 100%;
-        max-height: 90vh;
+        max-width: 95vw;
+        max-height: 80vh;
         width: auto;
         height: auto;
-        margin: 0;
+        margin: auto;
         object-fit: contain;
     }
     
@@ -96,11 +97,17 @@ html {
         font-size: 30px;
         top: 10px;
         right: 15px;
+        z-index: 1002;
     }
     
     .modal-caption {
         font-size: 1rem;
         padding: 8px 0;
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
     }
 }
 
@@ -826,13 +833,43 @@ body.sidebar-open {
         position: fixed;
         top: 54px;
         left: 0;
-        width: 80%;
-        max-width: 300px;
+        width: 70%;
+        max-width: 280px;
         height: calc(100vh - 54px);
         background-color: var(--main-color);
         z-index: 1025;
         overflow-y: auto;
-        padding: 1rem;
-        box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+        padding: 1.5rem 1rem;
+        box-shadow: 3px 0 15px rgba(0, 0, 0, 0.4);
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+            transform: translateX(-100%);
+            opacity: 0;
+        }
+        to {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    
+    #sideNav .navbar-nav {
+        padding-top: 1rem;
+    }
+    
+    #sideNav .nav-link {
+        padding: 0.75rem 1rem;
+        margin: 0.5rem 0;
+        border-radius: 6px;
+        font-size: 1rem;
+        transition: all 0.3s ease;
+    }
+    
+    #sideNav .nav-link:hover,
+    #sideNav .nav-link:active {
+        background-color: rgba(255, 255, 255, 0.15);
+        transform: translateX(5px);
     }
 }
