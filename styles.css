@@ -1,14 +1,14 @@
 /* ==========================================
-   SIMPLE PORTFOLIO CSS
-   Easy to understand and customize!
-   ========================================== */
+  SIMPLE PORTFOLIO CSS
+  Cleaned and optimized version.
+  ========================================== */
 
 /* --- COLORS (Change these to customize) --- */
 :root {
     --main-color: #393939;
-    /* Main orange color */
+    /* Main dark color */
     --main-dark: #28282836;
-    /* Darker orange */
+    /* Darker shade */
     --text-color: #6c757d;
     /* Gray text */
     --heading-color: #343a40;
@@ -83,7 +83,7 @@ html {
         left: 0 !important;
         width: 100vw !important;
     }
-    
+
     .modal-content {
         max-width: 95vw;
         max-height: 80vh;
@@ -92,14 +92,14 @@ html {
         margin: auto;
         object-fit: contain;
     }
-    
+
     .close-modal {
         font-size: 30px;
         top: 10px;
         right: 15px;
         z-index: 1002;
     }
-    
+
     .modal-caption {
         font-size: 1rem;
         padding: 8px 0;
@@ -165,8 +165,9 @@ html {
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     aspect-ratio: 1/1;
+    cursor: pointer;
 }
 
 .photo-item:hover {
@@ -186,21 +187,27 @@ html {
     bottom: 0;
     left: 0;
     right: 0;
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    background: rgba(0, 0, 0, 0.7);
     color: white;
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: center;
+    font-size: 0.9rem;
     font-weight: 600;
-    font-size: 1.1rem;
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    transform: translateY(100%);
+    transition: transform 0.3s ease-in-out;
 }
 
 .photo-item:hover .photo-caption {
-    opacity: 1;
+    transform: translateY(0);
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for Photo Grid */
+@media (max-width: 992px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 992px) {
     .photo-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -210,12 +217,29 @@ html {
 @media (max-width: 768px) {
     .photo-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .photo-item {
+        border-radius: 0.4rem;
+    }
+    
+    .photo-caption {
+        padding: 0.5rem;
+        font-size: 0.8rem;
+        transform: translateY(0);
+        background: rgba(0, 0, 0, 0.6);
     }
 }
 
-@media (max-width: 480px) {
+/* Keep 1 column for very small devices if needed */
+@media (max-width: 400px) {
     .photo-grid {
         grid-template-columns: 1fr;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -227,7 +251,7 @@ body {
     line-height: 1.5;
     color: var(--text-color);
     background: white;
-    padding-top: 54px;
+    padding-top: 60px;
     /* Space for mobile menu */
 }
 
@@ -315,11 +339,13 @@ p {
 /* --- LINKS --- */
 a {
     color: var(--main-color);
-    text-decoration: underline;
+    text-decoration: none;
+    /* Changed to none for a cleaner look */
 }
 
 a:hover {
     color: var(--main-dark);
+    text-decoration: underline;
 }
 
 /* --- DIVIDER LINE --- */
@@ -334,107 +360,6 @@ hr.m-0 {
     border: 0;
     height: 0;
     background-color: transparent;
-}
-
-/* --- PORTFOLIO WORK GALLERY --- */
-.work-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    background: var(--light-bg);
-    transition: all 0.3s ease;
-}
-
-/* When you hover over an image */
-.work-item:hover {
-    transform: translateY(-5px);
-    /* Move up slightly */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    /* Bigger shadow */
-}
-
-.work-item img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-/* Zoom image slightly on hover */
-.work-item:hover img {
-    transform: scale(1.05);
-}
-
-/* --- LAYOUT CONTAINERS --- */
-.img-fluid {
-    max-width: 100%;
-    height: auto;
-}
-
-.container-fluid {
-    width: 100%;
-    padding: 0 0.75rem;
-    margin: 0 auto;
-}
-
-/* --- GRID SYSTEM (For gallery layout) --- */
-.row {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 -0.75rem;
-}
-
-.row>* {
-    padding: 0 0.75rem;
-}
-
-/* Add spacing between items */
-.g-3>* {
-    padding: 0.5rem;
-}
-
-/* Column widths - controls how many items per row */
-.col-lg-3 {
-    width: 25%;
-}
-
-/* 4 items on large screens */
-.col-md-4 {
-    width: 33.33%;
-}
-
-/* 3 items on medium screens */
-.col-sm-6 {
-    width: 50%;
-}
-
-/* 2 items on small screens */
-
-/* Mobile: 1 column (full width) */
-@media (max-width: 575px) {
-
-    .col-lg-3,
-    .col-md-4,
-    .col-sm-6 {
-        width: 100%;
-    }
-}
-
-/* Tablet: 2 columns */
-@media (min-width: 576px) and (max-width: 767px) {
-
-    .col-lg-3,
-    .col-md-4 {
-        width: 50%;
-    }
-}
-
-/* Medium screens: 3 columns */
-@media (min-width: 768px) and (max-width: 991px) {
-    .col-lg-3 {
-        width: 33.33%;
-    }
 }
 
 /* --- NAVIGATION BAR --- */
@@ -553,14 +478,15 @@ hr.m-0 {
 /* Mobile styles */
 @media (max-width: 991.98px) {
     #sideNav .profile-section {
-        display: none; /* Hide the large profile section on mobile */
+        display: none;
+        /* Hide the large profile section on mobile */
     }
-    
+
     /* Mobile header styles */
     #sideNav .navbar-brand {
         font-size: 1rem;
     }
-    
+
     #sideNav .navbar-toggler {
         font-size: 0.875rem;
         border: 1px solid rgba(255, 255, 255, 0.2);
@@ -573,7 +499,7 @@ hr.m-0 {
         padding: 1.5rem 1rem;
         margin-bottom: 1.5rem;
     }
-    
+
     #sideNav .img-profile {
         width: 120px;
         height: 120px;
@@ -641,140 +567,6 @@ hr.m-0 {
     }
 }
 
-/* Mobile Header */
-#sideNav .d-flex.justify-content-between.w-100.align-items-center.d-lg-none.px-2 {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    align-items: center;
-    padding: 0.5rem 1rem;
-}
-
-#sideNav .d-flex.align-items-center {
-    display: flex;
-    align-items: center;
-}
-
-#sideNav .img-fluid.rounded-circle.me-2 {
-    width: 40px;
-    height: 40px;
-    object-fit: cover;
-    margin-right: 0.5rem;
-}
-
-#sideNav .navbar-brand.p-0.m-0 {
-    padding: 0;
-    margin: 0;
-}
-
-#sideNav .text-white.fw-bold {
-    color: white;
-    font-weight: bold;
-}
-
-#sideNav .navbar-toggler.p-2 {
-    padding: 0.5rem;
-}
-
-/* --- PHOTO GRID --- */
-.photo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    padding: 0.5rem;
-    width: 100%;
-}
-
-.photo-item {
-    position: relative;
-    overflow: hidden;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    aspect-ratio: 1;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-/* Desktop styles */
-@media (min-width: 992px) {
-    .photo-grid {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1.25rem;
-        padding: 1rem;
-    }
-    
-    .photo-item:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-    }
-}
-
-/* Mobile styles */
-@media (max-width: 991.98px) {
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-        padding: 0.5rem;
-    }
-}
-
-.photo-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.photo-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-    transition: transform 0.3s ease;
-}
-
-.photo-caption {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    padding: 0.75rem;
-    text-align: center;
-    font-size: 0.9rem;
-    transform: translateY(100%);
-    transition: transform 0.3s ease;
-}
-
-.photo-item:hover .photo-caption {
-    transform: translateY(0);
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-        padding: 0.5rem;
-    }
-    
-    .photo-item {
-        aspect-ratio: 1;
-    }
-}
-
-/* Small mobile devices */
-@media (max-width: 480px) {
-    .photo-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 0.75rem;
-        padding: 0.5rem;
-    }
-    
-    .photo-caption {
-        font-size: 0.8rem;
-        padding: 0.5rem;
-    }
-}
-
 /* --- SOCIAL ICONS --- */
 .social-icon {
     display: inline-flex;
@@ -820,50 +612,25 @@ hr.m-0 {
     text-align: center;
 }
 
-/* --- MAIN CONTENT --- */
-.resume-section {
-    min-height: auto;
-    padding: 2rem 1.5rem;
-    display: flex;
-    align-items: flex-start;
-    margin-left: 0;
-    transition: margin-left 0.3s ease;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-}
-
-.resume-section:last-child {
-    border-bottom: none;
-}
-
-.resume-section > .resume-section-content {
-    width: 100%;
-    padding: 0;
-}
-
-@media (min-width: 992px) {
-    .resume-section {
-        margin-left: 17rem;
-        padding: 2rem 2.5rem;
-        max-width: calc(100% - 17rem);
-    }
-    
-    .resume-section-content {
-        width: 100%;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-}
-
-/* --- PAGE SECTIONS --- */
+/* --- MAIN CONTENT SECTIONS --- */
 section.resume-section {
     display: flex;
     align-items: center;
     padding: 5rem 1rem;
-    max-width: 75rem;
+    max-width: 100%;
+    border-bottom: 1px solid #dee2e6;
+}
+
+section.resume-section:last-of-type {
+    border-bottom: none;
 }
 
 .resume-section-content {
     width: 100%;
+    max-width: 75rem;
+    /* Max width for content */
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 /* Full height sections on tablets and up */
@@ -873,93 +640,26 @@ section.resume-section {
     }
 }
 
-/* More padding on larger screens */
+/* More padding on larger screens and account for sidebar */
 @media (min-width: 992px) {
     section.resume-section {
         padding: 5rem 3rem;
     }
-}
 
-/* --- UTILITY CLASSES (Helpers) --- */
-/* Margin helpers */
-.m-0 {
-    margin: 0 !important;
-}
-
-.mb-0 {
-    margin-bottom: 0 !important;
-}
-
-.mb-3 {
-    margin-bottom: 1rem !important;
-}
-
-.mb-5 {
-    margin-bottom: 1.5rem !important;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid #f0f0f0;
-}
-
-.mx-auto {
-    margin-left: auto !important;
-    margin-right: auto !important;
-}
-
-/* Padding helpers */
-.p-0 {
-    padding: 0 !important;
-}
-
-/* Display helpers */
-.d-none {
-    display: none !important;
-}
-
-.d-block {
-    display: block !important;
-}
-
-.d-flex {
-    display: flex !important;
-}
-
-/* Flexbox helpers */
-.flex-column {
-    flex-direction: column !important;
-}
-
-.flex-md-row {
-    flex-direction: row !important;
-}
-
-.flex-grow-1 {
-    flex-grow: 1 !important;
-}
-
-.justify-content-between {
-    justify-content: space-between !important;
-}
-
-/* Color helpers */
-.text-primary {
-    color: var(--main-color) !important;
-}
-
-/* Shape helpers */
-.rounded-circle {
-    border-radius: 50% !important;
-}
-
-/* Show/hide on desktop */
-@media (min-width: 992px) {
-    .d-lg-block {
-        display: block !important;
-    }
-
-    .d-lg-none {
-        display: none !important;
+    .resume-section-content {
+        max-width: 800px;
+        margin: 0;
+        /* Align to the left of the content area */
+        padding: 0 2rem;
     }
 }
+
+
+/* --- UTILITY CLASSES (FROM BOOTSTRAP) --- */
+/* All utility classes like .m-0, .mb-5, .d-flex, .text-primary, etc.,
+  are now provided by the Bootstrap 5.3 CSS file linked in the <head>.
+  No custom definitions are needed here.
+*/
 
 /* Icon font size */
 .dev-icons {
@@ -974,11 +674,11 @@ section.resume-section {
         border-radius: 0.5rem;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     }
-    
+
     #sideNav .navbar-nav {
         padding: 1rem 0;
     }
-    
+
     #sideNav .nav-link {
         padding: 0.75rem 1.5rem;
         margin: 0.25rem 0;
@@ -987,7 +687,7 @@ section.resume-section {
         transition: all 0.2s ease;
         border-left: 3px solid transparent;
     }
-    
+
     #sideNav .nav-link:hover,
     #sideNav .nav-link:active {
         background-color: rgba(255, 255, 255, 0.1);

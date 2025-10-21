@@ -15,82 +15,28 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="styles.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <style>
-        /* Enables smooth scrolling for the whole page */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Styles for the portfolio gallery */
-        .work-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 0.5rem;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .work-item:hover {
-            transform: scale(1.05);
-        }
-
-        .work-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .work-caption {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background-color: rgba(0, 0, 0, 0.7);
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-
-        .work-item:hover .work-caption {
-            opacity: 1;
-        }
-
-        .work-caption h4 {
-            margin-top: 0;
-            font-size: 1.25rem;
-        }
-
-        .work-caption p {
-            margin-bottom: 0;
-            font-size: 0.9rem;
-        }
-    </style>
 </head>
 
 <body id="page-top" data-bs-spy="scroll" data-bs-target="#sideNav">
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
         <div class="container-fluid d-flex flex-column h-100 px-4">
-            <!-- Profile Section -->
             <div class="profile-section text-center mb-4">
                 <img class="img-fluid img-profile rounded-circle mb-2" src="assets/profile.png"
                     alt="Profile Picture of Samir Navas">
                 <h4 class="text-white mb-0 d-none d-lg-block">Samir Navas</h4>
             </div>
-            
-            <!-- Mobile Header -->
+
             <div class="mobile-header d-flex justify-content-between align-items-center w-100 d-lg-none px-3 py-2">
                 <div class="d-flex align-items-center">
-                    <img class="rounded-circle me-2" src="assets/profile.png"
-                        alt="Profile" style="width: 36px; height: 36px; object-fit: cover;">
+                    <img class="rounded-circle me-2" src="assets/profile.png" alt="Profile"
+                        style="width: 36px; height: 36px; object-fit: cover;">
                     <a class="navbar-brand p-0 m-0" href="#page-top">
                         <span class="text-white fw-bold">Samir Navas</span>
                     </a>
                 </div>
-                <button class="navbar-toggler p-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-                    aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler p-1" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
@@ -112,10 +58,6 @@
                     Samir
                     <span class="text-primary">Navas</span>
                 </h1>
-                <!-- <div class="subheading mb-5">
-                    <a href="mailto:samirnavas7662@gmail.com">samirnavas7662@gmail.com</a> |
-                    +91 9446583084
-                </div> -->
                 <p class="lead mb-5">Flexible and passionate design enthusiast with hands-on experience in
                     freelance design projects. Currently pursuing B-Tech (Second Year) and eager
                     to contribute creative solutions and user-centered designs to impactful digital products.
@@ -155,8 +97,8 @@
                 <h2 class="mb-5">Education</h2>
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
                     <div class="flex-grow-1">
-                        <h3 class="mb-0">Model Engineering College, Thrikkakkara</h3>
-                        <div class="subheading mb-3">B-Tech in Computer Science (Second Year)</div>
+                        <h3 class="mb-0">COCHIN UNIVERSITY OF SCIENCE AND TECHNOLOGY</h3>
+                        <div class="subheading mb-3">B-Tech in Information Technology (Second Year)</div>
                     </div>
                 </div>
             </div>
@@ -188,141 +130,117 @@
             <div class="resume-section-content">
                 <h2 class="mb-5">My Work</h2>
 
-                <!-- Photo Grid Section -->
                 <div class="photo-grid">
-                    <!-- Nintendo -->
                     <div class="photo-item">
                         <img src="works/nintendo.jpg" alt="Nintendo">
                         <div class="photo-caption">Nintendo</div>
                     </div>
 
-                    <!-- SOE Day -->
                     <div class="photo-item">
                         <img src="works/SOE Day.jpg" alt="SOE Day">
                         <div class="photo-caption">SOE Day</div>
                     </div>
 
-                    <!-- Thimirppu -->
                     <div class="photo-item">
                         <img src="works/thimirppu.jpg" alt="Thimirppu">
                         <div class="photo-caption">Thimirppu</div>
                     </div>
 
-                    <!-- Swaraj Poster -->
                     <div class="photo-item">
                         <img src="works/Swaraj Poster.jpg" alt="Swaraj Poster">
                         <div class="photo-caption">Swaraj Poster</div>
                     </div>
 
-                    <!-- Tech Fest -->
                     <div class="photo-item">
                         <img src="works/tech fest copy.jpg" alt="Tech Fest">
                         <div class="photo-caption">Tech Fest</div>
                     </div>
 
-                    <!-- Ifthar -->
                     <div class="photo-item">
                         <img src="works/Ifthar916.jpg" alt="Ifthar">
                         <div class="photo-caption">Ifthar</div>
                     </div>
 
-                    <!-- Qasr -->
                     <div class="photo-item">
                         <img src="works/Qasr.jpg" alt="Qasr">
                         <div class="photo-caption">Qasr</div>
                     </div>
 
-                    <!-- SARGAM Zone -->
                     <div class="photo-item">
                         <img src="works/SARGAM zone1.png" alt="SARGAM Zone">
                         <div class="photo-caption">SARGAM Zone</div>
                     </div>
 
-                    <!-- Ageegah -->
                     <div class="photo-item">
                         <img src="works/Ageegah.jpg" alt="Ageegah">
                         <div class="photo-caption">Ageegah</div>
                     </div>
 
-                    <!-- Football Tournament Team -->
                     <div class="photo-item">
                         <img src="works/Football Tournament Team.png" alt="Football Tournament Team">
                         <div class="photo-caption">Football Team</div>
                     </div>
 
-                    <!-- IT DRIBBLE -->
                     <div class="photo-item">
                         <img src="works/IT DRIBBLE.jpg" alt="IT DRIBBLE">
                         <div class="photo-caption">IT Dribbble</div>
                     </div>
 
-                    <!-- Football Tournament Poster -->
                     <div class="photo-item">
                         <img src="works/Football Tournament Poster marks.png" alt="Football Tournament Poster">
                         <div class="photo-caption">Tournament Poster</div>
                     </div>
 
-                    <!-- IT LEAGUE -->
                     <div class="photo-item">
                         <img src="works/IT LEAGUE.jpg" alt="IT LEAGUE">
                         <div class="photo-caption">IT League</div>
                     </div>
 
-                    <!-- Football Tournament Poster 2 -->
                     <div class="photo-item">
                         <img src="works/Football Tournament Poster.png" alt="Football Tournament">
                         <div class="photo-caption">Tournament</div>
                     </div>
 
-                    <!-- Football -->
                     <div class="photo-item">
                         <img src="works/Football.jpg" alt="Football">
                         <div class="photo-caption">Football</div>
                     </div>
 
-                    <!-- Suggest Name -->
                     <div class="photo-item">
                         <img src="works/Suggest Name.jpg" alt="Suggest Name">
                         <div class="photo-caption">Suggest Name</div>
                     </div>
 
-                    <!-- Kombu -->
                     <div class="photo-item">
                         <img src="works/kombu.jpg" alt="Kombu">
                         <div class="photo-caption">Kombu</div>
                     </div>
 
-                    <!-- Kombu Standy Flex -->
                     <div class="photo-item">
                         <img src="works/kombu_standy_flex.jpg" alt="Kombu Standy Flex">
                         <div class="photo-caption">Kombu Standy</div>
                     </div>
 
-                    <!-- Kullu Manali -->
                     <div class="photo-item">
                         <img src="works/kullu-manali .png" alt="Kullu Manali">
                         <div class="photo-caption">Kullu Manali</div>
                     </div>
 
-                    <!-- Batminton -->
                     <div class="photo-item">
                         <img src="works/Batminton.png" alt="Batminton">
                         <div class="photo-caption">Batminton</div>
                     </div>
 
-                    <!-- Shahana Tution -->
                     <div class="photo-item">
                         <img src="works/shahana tution.jpg" alt="Shahana Tution">
                         <div class="photo-caption">Tution</div>
                     </div>
 
-                    <!-- Space Poster -->
                     <div class="photo-item">
                         <img src="works/space poster.jpg" alt="Space Poster">
                         <div class="photo-caption">Space Poster</div>
                     </div>
 
-                    <!-- Poster -->
                     <div class="photo-item">
                         <img src="works/Poster.jpg" alt="Poster">
                         <div class="photo-caption">Poster</div>
@@ -331,7 +249,6 @@
             </div>
         </section>
     </div>
-    <!-- Image Modal -->
     <div id="imageModal" class="modal">
         <span class="close-modal">&times;</span>
         <img class="modal-content" id="modalImage">
@@ -339,84 +256,100 @@
     </div>
 
     <script>
-        // Get the modal
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const captionText = document.getElementById('modalCaption');
-
-        // Get all photo items
-        const photoItems = document.querySelectorAll('.photo-item');
-
-        // Add click event to each photo item
-        photoItems.forEach(item => {
-            const img = item.querySelector('img');
-            const caption = item.querySelector('.photo-caption');
-
-            item.addEventListener('click', function () {
-                modal.style.display = 'block';
-                modalImg.src = img.src;
-                captionText.innerHTML = caption.innerHTML;
-                document.body.style.overflow = 'hidden'; // Prevent scrolling when modal is open
-            });
-        });
-
-        // Close modal when clicking the X
-        document.querySelector('.close-modal').onclick = function () {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Re-enable scrolling
-        }
-
-        // Close modal when clicking outside the image
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            }
-        }
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape' && modal.style.display === 'block') {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Re-enable scrolling
-            }
-        });
-    </script>
-    <script>
-        // Mobile navbar functionality
+        // Wait for the document to be fully loaded
         document.addEventListener('DOMContentLoaded', function () {
+
+            // --- Modal Logic ---
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const captionText = document.getElementById('modalCaption');
+            const photoItems = document.querySelectorAll('.photo-item');
+
+            // Add click event to each photo item
+            photoItems.forEach(item => {
+                const img = item.querySelector('img');
+                const caption = item.querySelector('.photo-caption');
+
+                if (img && caption) { // Ensure elements exist
+                    item.addEventListener('click', function () {
+                        modal.style.display = 'block';
+                        modalImg.src = img.src;
+                        captionText.innerHTML = caption.innerHTML;
+                        document.body.style.overflow = 'hidden'; // Prevent scrolling
+                    });
+                }
+            });
+
+            // Function to close modal
+            function closeModal() {
+                modal.style.display = 'none';
+                document.body.style.overflow = 'auto'; // Re-enable scrolling
+            }
+
+            // Close modal when clicking the X
+            const closeModalButton = document.querySelector('.close-modal');
+            if (closeModalButton) {
+                closeModalButton.onclick = closeModal;
+            }
+
+            // Close modal when clicking outside the image
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+
+            // Close modal with Escape key
+            document.addEventListener('keydown', function (event) {
+                if (event.key === 'Escape' && modal.style.display === 'block') {
+                    closeModal();
+                }
+            });
+
+            // --- Mobile Navbar Functionality ---
             const navbarCollapse = document.getElementById('navbarResponsive');
+            const navLinks = document.querySelectorAll('#sideNav .nav-link');
 
             // Close navbar when clicking on nav links
-            document.querySelectorAll('#sideNav .nav-link').forEach(link => {
+            navLinks.forEach(link => {
                 link.addEventListener('click', function () {
-                    if (window.innerWidth < 992) {
-                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse) || 
-                                        new bootstrap.Collapse(navbarCollapse, { toggle: false });
-                        if (navbarCollapse.classList.contains('show')) {
+                    // Check if the navbar is currently shown (Bootstrap 5 adds 'show' class)
+                    if (window.innerWidth < 992 && navbarCollapse.classList.contains('show')) {
+                        // Use Bootstrap's native method to hide the collapse
+                        const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                        if (bsCollapse) {
                             bsCollapse.hide();
                         }
                     }
                 });
             });
 
-            // Smooth scrolling for anchor links
+            // --- Smooth Scrolling for Anchor Links ---
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 anchor.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
-                    if (href !== '#' && href !== '#page-top') {
-                        e.preventDefault();
+
+                    // Check for valid section links (e.g., #about)
+                    if (href && href !== '#' && href.startsWith('#')) {
                         const target = document.querySelector(href);
+
                         if (target) {
+                            e.preventDefault(); // Prevent default jump
+
+                            // Calculate offset: 60px on mobile, 0 on desktop
                             const offset = window.innerWidth >= 992 ? 0 : 60;
+                            const targetPosition = target.offsetTop - offset;
+
+                            // Perform smooth scroll
                             window.scrollTo({
-                                top: target.offsetTop - offset,
+                                top: targetPosition,
                                 behavior: 'smooth'
                             });
                         }
                     }
                 });
             });
+
         });
     </script>
 
