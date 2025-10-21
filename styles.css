@@ -220,11 +220,11 @@ html {
         gap: 1rem;
         padding: 0 1rem;
     }
-    
+
     .photo-item {
         border-radius: 0.4rem;
     }
-    
+
     .photo-caption {
         padding: 0.5rem;
         font-size: 0.8rem;
@@ -669,14 +669,16 @@ section.resume-section:last-of-type {
 /* Mobile navbar dropdown styles */
 @media (max-width: 991px) {
     #sideNav .navbar-collapse {
+        align-content: center;
         background-color: var(--main-color);
         margin-top: 0.5rem;
         border-radius: 0.5rem;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+
     }
 
     #sideNav .navbar-nav {
-        padding: 1rem 0;
+        align-items: center;
+        padding: 1rem 8rem;
     }
 
     #sideNav .nav-link {
