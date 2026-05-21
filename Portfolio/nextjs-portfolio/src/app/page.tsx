@@ -8,10 +8,34 @@ import ScrollReveal from "@/components/ScrollReveal";
 export default function Home() {
   const assetsDir = path.join(process.cwd(), "public", "assets");
   const files = fs.readdirSync(assetsDir);
-  const images = files.filter(
-    (file) =>
-      /\.(jpg|jpeg|png|gif|webp)$/i.test(file) && file !== "profile.png"
-  );
+
+  // Add your best image filenames here in the order you want them to appear at the top
+  const IMAGE_PRIORITY: string[] = [
+    "SOE Day.jpg",
+    "match day.jpg",
+    "Tiki Taka CS.jpg",
+    "ISL S2.jpg",
+    "Qasr.jpg",
+    "kombu_standy_flex.jpg",
+    "nintendo2 .jpg",
+    "tech fest copy.jpg",
+    "kombu.jpg"
+  ];
+
+  const images = files
+    .filter(
+      (file) =>
+        /\.(jpg|jpeg|png|gif|webp)$/i.test(file) && file !== "profile.png"
+    )
+    .sort((a, b) => {
+      const indexA = IMAGE_PRIORITY.indexOf(a);
+      const indexB = IMAGE_PRIORITY.indexOf(b);
+
+      if (indexA !== -1 && indexB !== -1) return indexA - indexB; // Both in priority list, sort by priority
+      if (indexA !== -1) return -1; // Only A is in priority list, A comes first
+      if (indexB !== -1) return 1; // Only B is in priority list, B comes first
+      return a.localeCompare(b); // Neither in priority list, sort alphabetically
+    });
 
   const CONTACT_LINKS = [
     {
@@ -173,18 +197,32 @@ export default function Home() {
             </div>
           </ScrollReveal>
 
-          {/* Dynamic Image Gallery - 3 to 4 in a row, natural aspect ratio */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start">
-            {images.map((img) => (
-              <div key={img} className="overflow-hidden rounded-lg group bg-surface-container-low shadow-sm hover:shadow-md transition-shadow">
-                <img
-                  src={`/assets/${img}`}
-                  alt={img.replace(/\.[^/.]+$/, "")}
-                  loading="eager"
-                  className="w-full h-auto object-contain transition-transform duration-700 ease-out group-hover:scale-[1.02]"
-                />
-              </div>
-            ))}
+          {/* Dynamic Image Gallery - Bento Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[125vw] sm:auto-rows-[380px] md:auto-rows-[310px] lg:auto-rows-[360px] grid-flow-dense">
+            {images.map((img, index) => {
+              // Create bento grid pattern based on index
+              let spanClass = "col-span-1 row-span-1";
+              if (index % 6 === 0) {
+                spanClass = "md:col-span-2 md:row-span-2 sm:col-span-2 sm:row-span-2"; // Large 3:4
+              } else if (index % 4 === 0) {
+                spanClass = "md:col-span-2 md:row-span-1 sm:col-span-2"; // Wide horizontal block
+              } else if (index % 5 === 0) {
+                spanClass = "md:col-span-1 md:row-span-2"; // Extra tall block
+              }
+
+              return (
+                <div key={img} className={`overflow-hidden rounded-2xl group bg-surface-container-low border border-outline-variant shadow-sm hover:shadow-md transition-shadow relative ${spanClass}`}>
+                  <Image
+                    src={`/assets/${img}`}
+                    alt={img.replace(/\.[^/.]+$/, "")}
+                    fill
+                    unoptimized
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.02]"
+                  />
+                </div>
+              );
+            })}
           </div>
         </section>
 
