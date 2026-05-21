@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import fs from "fs";
 import path from "path";
+import ScrollReveal from "@/components/ScrollReveal";
 
 export default function Home() {
   const assetsDir = path.join(process.cwd(), "public", "assets");
@@ -64,27 +65,33 @@ export default function Home() {
         <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center" id="about">
           {/* Text Content */}
           <div className="md:col-span-7 space-y-8 pr-0 md:pr-12">
-            <h1 className="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary">
-              Crafting visual stories as a Graphic Designer & Freelancer.
-            </h1>
-            <div className="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
-              <p>
-                Hi, I'm Samir Navas. I specialize in crafting minimalist, high-end visual identities and digital experiences.
-                My focus is entirely on the work—letting form and function speak for themselves.
-              </p>
-            </div>
+            <ScrollReveal>
+              <h1 className="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary">
+                Crafting visual stories as a Graphic Designer & Freelancer.
+              </h1>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <div className="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
+                <p>
+                  Hi, I'm Samir Navas. I specialize in crafting minimalist, high-end visual identities and digital experiences.
+                  My focus is entirely on the work—letting form and function speak for themselves.
+                </p>
+              </div>
+            </ScrollReveal>
             {/* Categories/Tags */}
-            <div className="flex flex-wrap gap-3 pt-4">
-              <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
-                Brand Systems
-              </span>
-              <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
-                Digital Art
-              </span>
-              <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
-                Posters
-              </span>
-            </div>
+            <ScrollReveal delay={400}>
+              <div className="flex flex-wrap gap-3 pt-4">
+                <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
+                  Brand Systems
+                </span>
+                <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
+                  Digital Art
+                </span>
+                <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
+                  Posters
+                </span>
+              </div>
+            </ScrollReveal>
           </div>
           {/* Image Container */}
           <div className="md:col-span-5 mt-12 md:mt-0 relative group">
@@ -94,6 +101,7 @@ export default function Home() {
                 src="/assets/profile.png"
                 alt="Samir Navas"
                 fill
+                priority
                 unoptimized
                 className="object-cover grayscale hover:grayscale-0 transition-all duration-700"
               />
@@ -103,11 +111,13 @@ export default function Home() {
 
         {/* Expertise / Services Section */}
         <section>
-          <div className="mb-12 border-b border-outline-variant pb-4">
-            <h2 className="font-headline-md text-headline-md text-primary">
-              Capabilities
-            </h2>
-          </div>
+          <ScrollReveal>
+            <div className="mb-12 border-b border-outline-variant pb-4">
+              <h2 className="font-headline-md text-headline-md text-primary">
+                Capabilities
+              </h2>
+            </div>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
             {/* Card 1 */}
             <div className="p-8 border border-outline-variant bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-transform duration-300">
@@ -144,22 +154,24 @@ export default function Home() {
         {/* Works Section */}
         <section id="work">
           {/* Navigation Categories */}
-          <div className="flex flex-wrap gap-8 mb-12 border-b border-outline-variant pb-4 items-end">
-            <h2 className="font-headline-md text-headline-md text-primary mr-auto">
-              Selected Works
-            </h2>
-            <nav className="flex gap-8">
-              <button className="font-label-sm text-label-sm text-primary font-bold border-b-2 border-primary pb-4 -mb-4.5">
-                All Work
-              </button>
-              <button className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors pb-4">
-                Posters
-              </button>
-              <button className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors pb-4">
-                Branding
-              </button>
-            </nav>
-          </div>
+          <ScrollReveal>
+            <div className="flex flex-wrap gap-8 mb-12 border-b border-outline-variant pb-4 items-end">
+              <h2 className="font-headline-md text-headline-md text-primary mr-auto">
+                Selected Works
+              </h2>
+              <nav className="flex gap-8">
+                <button className="font-label-sm text-label-sm text-primary font-bold border-b-2 border-primary pb-4 -mb-4.5">
+                  All Work
+                </button>
+                <button className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors pb-4">
+                  Posters
+                </button>
+                <button className="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-colors pb-4">
+                  Branding
+                </button>
+              </nav>
+            </div>
+          </ScrollReveal>
 
           {/* Dynamic Image Gallery - 3 to 4 in a row, natural aspect ratio */}
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 items-start">
@@ -179,12 +191,16 @@ export default function Home() {
         {/* Contact Section */}
         <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start" id="contact">
           <div className="md:col-span-4 space-y-6 pr-0 md:pr-12">
-            <h2 className="font-headline-md text-headline-md text-primary">
-              Let's work together.
-            </h2>
-            <p className="font-body-md text-body-md text-on-surface-variant">
-              Available for freelance opportunities. Connect with me directly through any of these platforms.
-            </p>
+            <ScrollReveal>
+              <h2 className="font-headline-md text-headline-md text-primary">
+                Let's work together.
+              </h2>
+            </ScrollReveal>
+            <ScrollReveal delay={200}>
+              <p className="font-body-md text-body-md text-on-surface-variant">
+                Available for freelance opportunities. Connect with me directly through any of these platforms.
+              </p>
+            </ScrollReveal>
           </div>
           <div className="md:col-span-8 mt-12 md:mt-0">
             <div className="flex flex-col">
