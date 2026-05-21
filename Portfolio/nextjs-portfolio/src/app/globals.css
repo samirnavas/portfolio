@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+html {
+  scroll-behavior: smooth;
+}
+
 @theme {
   --color-on-surface-variant: #444748;
   --color-inverse-primary: #c8c6c5;

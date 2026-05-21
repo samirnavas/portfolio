@@ -16,41 +16,41 @@ export default function Home() {
     {
       name: "Email",
       value: "samirnavas7662@gmail.com",
-      href: "mailto:samirnavas7662@gmail.com",
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=samirnavas7662@gmail.com",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
       )
     },
     {
       name: "Phone",
-      value: "+91 0000 000 000",
-      href: "tel:+910000000000",
+      value: "+91 9446 583 084",
+      href: "tel:+919446583084",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
       )
     },
     {
       name: "LinkedIn",
       value: "linkedin.com/in/samirnavas",
-      href: "https://linkedin.com",
+      href: "https://www.linkedin.com/in/samir-navas-a6128633b",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
       )
     },
     {
       name: "Twitter",
       value: "@samirnavas",
-      href: "https://twitter.com",
+      href: "https://x.com/SamirNavas24938",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
       )
     },
     {
       name: "Instagram",
       value: "@samirnavas",
-      href: "https://instagram.com",
+      href: "https://instagram.com/_samirnavas_",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
       )
     }
   ];
@@ -59,7 +59,7 @@ export default function Home() {
     <>
       <Navbar />
       <main className="flex-grow w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto space-y-section-gap">
-        
+
         {/* Hero / Bio Section: Asymmetric Grid */}
         <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center" id="about">
           {/* Text Content */}
@@ -69,7 +69,7 @@ export default function Home() {
             </h1>
             <div className="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
               <p>
-                Hi, I'm Samir Navas. I specialize in crafting minimalist, high-end visual identities and digital experiences. 
+                Hi, I'm Samir Navas. I specialize in crafting minimalist, high-end visual identities and digital experiences.
                 My focus is entirely on the work—letting form and function speak for themselves.
               </p>
             </div>
@@ -192,8 +192,8 @@ export default function Home() {
                 <a
                   key={index}
                   href={link.href}
-                  target={link.name !== "Email" && link.name !== "Phone" ? "_blank" : undefined}
-                  rel={link.name !== "Email" && link.name !== "Phone" ? "noopener noreferrer" : undefined}
+                  target={link.name !== "Phone" ? "_blank" : undefined}
+                  rel={link.name !== "Phone" ? "noopener noreferrer" : undefined}
                   className="flex items-center justify-between py-6 border-b border-outline-variant group hover:border-primary transition-colors"
                 >
                   <div className="flex items-center gap-6">
@@ -203,8 +203,8 @@ export default function Home() {
                   <div className="flex items-center gap-4 text-on-surface-variant group-hover:text-primary transition-colors">
                     <span className="font-body-md text-body-md hidden sm:block">{link.value}</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1">
-                      <line x1="7" y1="17" x2="17" y2="7"/>
-                      <polyline points="7 7 17 7 17 17"/>
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
                     </svg>
                   </div>
                 </a>

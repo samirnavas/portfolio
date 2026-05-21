@@ -13,26 +13,26 @@ export default function Navbar() {
         </Link>
         {/* Navigation Links */}
         <nav className="hidden md:flex items-center gap-8">
-          <Link
+          <a
             className="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-sm text-label-sm hover:opacity-80"
-            href="/#about"
+            href="#about"
           >
             About
-          </Link>
-          <Link
+          </a>
+          <a
             className="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-sm text-label-sm hover:opacity-80"
-            href="/#work"
+            href="#work"
           >
             Work
-          </Link>
+          </a>
         </nav>
         {/* Trailing Action */}
-        <Link
+        <a
           className="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-none font-label-sm text-label-sm hover:opacity-80 transition-opacity duration-300"
-          href="/#contact"
+          href="#contact"
         >
           Let's Talk
-        </Link>
+        </a>
         {/* Mobile Menu Toggle (Minimal) */}
         <button className="md:hidden text-primary p-2">
           {/* We can use a simple SVG for the menu icon instead of Material Symbols to reduce deps */}

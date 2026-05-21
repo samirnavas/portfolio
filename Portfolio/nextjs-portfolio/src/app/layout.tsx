@@ -25,7 +25,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geist.variable} ${hankenGrotesk.variable} antialiased`}
+      className={`scroll-smooth ${geist.variable} ${hankenGrotesk.variable} antialiased`}
     >
       <body className="bg-surface text-on-surface min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary selection:text-on-primary">
         {children}

@@ -15,24 +15,24 @@ export default function Footer() {
         </div>
         {/* Links */}
         <div className="flex flex-col md:flex-row gap-6 md:gap-12">
-          <Link
+          <a
             className="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200"
-            href="/#about"
+            href="#about"
           >
             About
-          </Link>
-          <Link
+          </a>
+          <a
             className="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200"
-            href="/#work"
+            href="#work"
           >
             Work
-          </Link>
-          <Link
+          </a>
+          <a
             className="font-label-sm text-label-sm text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200"
-            href="/#contact"
+            href="#contact"
           >
             Connect
-          </Link>
+          </a>
         </div>
       </div>
     </footer>
