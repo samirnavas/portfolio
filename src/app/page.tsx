@@ -1,67 +1,22 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
-import fs from "fs";
-import path from "path";
 import ScrollReveal from "@/components/ScrollReveal";
 import WorksGallery, { WorkImage, Category } from "@/components/WorksGallery";
+import { supabase } from "@/utils/supabase";
 
-export default function Home() {
-  const assetsDir = path.join(process.cwd(), "public", "assets");
-  const files = fs.readdirSync(assetsDir);
+export const revalidate = 60; // Revalidate every 60 seconds
 
-  // Add your best image filenames here in the order you want them to appear at the top
-  const IMAGE_PRIORITY: string[] = [
-    "SOE Day.webp",
-    "match day.webp",
-    "Tiki Taka CS.webp",
-    "ISL S2.webp",
-    "Qasr.webp",
-    "kombu_standy_flex.webp",
-    "nintendo2 .webp",
-    "tech fest copy.webp",
-    "kombu.webp"
-  ];
+export default async function Home() {
+  const { data: works } = await supabase
+    .from("works")
+    .select("*")
+    .order("priority", { ascending: true, nullsFirst: false });
 
-  const images = files
-    .filter(
-      (file) =>
-        /\.(jpg|jpeg|png|gif|webp)$/i.test(file) && file !== "profile.png"
-    )
-    .sort((a, b) => {
-      const indexA = IMAGE_PRIORITY.indexOf(a);
-      const indexB = IMAGE_PRIORITY.indexOf(b);
-
-      if (indexA !== -1 && indexB !== -1) return indexA - indexB; // Both in priority list, sort by priority
-      if (indexA !== -1) return -1; // Only A is in priority list, A comes first
-      if (indexB !== -1) return 1; // Only B is in priority list, B comes first
-      return a.localeCompare(b); // Neither in priority list, sort alphabetically
-    });
-
-  const IMAGE_CATEGORIES: Record<string, Category> = {
-    "SOE Day.webp": "Posters",
-    "match day.webp": "Posters",
-    "Tiki Taka CS.webp": "Posters",
-    "ISL S2.webp": "Posters",
-    "Qasr.webp": "Posters",
-    "kombu_standy_flex.webp": "Posters",
-    "nintendo2 .webp": "Digital Art",
-    "tech fest copy.webp": "Posters",
-    "kombu.webp": "Posters",
-    "Batminton.webp": "Posters",
-    "Football Tournament Poster.webp": "Posters",
-    "Football Tournament Team.webp": "Posters",
-    "Football.webp": "Posters",
-    "Ifthar916.webp": "Posters",
-    "SARGAM zone1.webp": "Posters",
-    "Swaraj Poster.webp": "Posters",
-    "kullu-manali .webp": "Posters",
-    "thimirppu.webp": "Posters"
-  };
-
-  const imagesWithCategories: WorkImage[] = images.map(img => ({
-    src: img,
-    category: IMAGE_CATEGORIES[img] || "Posters"
+  const imagesWithCategories: WorkImage[] = (works || []).map((work: any) => ({
+    src: supabase.storage.from("portfolio-assets").getPublicUrl(work.file_name).data.publicUrl,
+    category: work.category as Category,
+    title: work.file_name.replace(/\.[^/.]+$/, ""),
   }));
 
   const CONTACT_LINKS = [
