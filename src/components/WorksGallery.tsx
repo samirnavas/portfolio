@@ -60,7 +60,8 @@ export default function WorksGallery({ images }: WorksGalleryProps) {
               key={img.src}
               layout
               initial={{ opacity: 0, scale: 0.9, filter: "blur(5px)" }}
-              animate={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              whileInView={{ opacity: 1, scale: 1, filter: "blur(0px)" }}
+              viewport={{ once: true, margin: "50px" }}
               exit={{ opacity: 0, scale: 0.9, filter: "blur(5px)" }}
               transition={{ duration: 0.4, ease: [0.23, 1, 0.32, 1] }}
               className="aspect-[3/4] overflow-hidden rounded-2xl group bg-surface-container-low border border-outline-variant shadow-sm hover:shadow-md relative"
