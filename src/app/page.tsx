@@ -65,16 +65,26 @@ export default async function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto space-y-section-gap">
+      <main className="flex-grow w-full px-margin-mobile md:px-margin-desktop pt-8 pb-16 md:pt-16 md:pb-24 lg:py-14 max-w-container-max mx-auto space-y-section-gap">
 
         {/* Hero / Bio Section: Asymmetric Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center scroll-mt-32" id="about">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center scroll-mt-32" id="about">
           {/* Text Content */}
-          <div className="md:col-span-7 space-y-8 pr-0 md:pr-12">
+          <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-12">
             <ScrollReveal>
-              <h1 className="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary">
-                Crafting visual stories as a Graphic Designer & Freelancer.
-              </h1>
+              <div className="flex flex-col lg:block gap-6">
+                <Image
+                  src="/logo.png"
+                  alt="Samir Navas Logo"
+                  width={80}
+                  height={80}
+                  className="lg:hidden object-contain rounded-full self-start"
+                  unoptimized
+                />
+                <h1 className="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary">
+                  Crafting visual stories as a Graphic Designer & Freelancer.
+                </h1>
+              </div>
             </ScrollReveal>
             <ScrollReveal delay={200}>
               <div className="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
@@ -99,7 +109,7 @@ export default async function Home() {
             </ScrollReveal>
           </div>
           {/* Image Container */}
-          <div className="md:col-span-5 mt-12 md:mt-0 relative group">
+          <div className="hidden lg:block lg:col-span-5 mt-12 lg:mt-0 relative group">
             <div className="relative w-full aspect-square overflow-hidden">
               <Image
                 src="/logo.png"
