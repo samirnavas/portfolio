@@ -68,7 +68,7 @@ export default async function Home() {
       <main className="flex-grow w-full px-margin-mobile md:px-margin-desktop py-section-gap max-w-container-max mx-auto space-y-section-gap">
 
         {/* Hero / Bio Section: Asymmetric Grid */}
-        <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center" id="about">
+        <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center scroll-mt-32" id="about">
           {/* Text Content */}
           <div className="md:col-span-7 space-y-8 pr-0 md:pr-12">
             <ScrollReveal>
@@ -79,8 +79,7 @@ export default async function Home() {
             <ScrollReveal delay={200}>
               <div className="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
                 <p>
-                  Hi, I'm Samir Navas. I specialize in crafting minimalist, high-end visual identities and digital experiences.
-                  My focus is entirely on the work—letting form and function speak for themselves.
+                  Hi, I'm Samir Navas. I design clean, identity-focused logos and striking posters that bridge the gap between creative concept and functional design. No fluff—just sharp visuals that do the talking.
                 </p>
               </div>
             </ScrollReveal>
@@ -130,7 +129,7 @@ export default async function Home() {
                 Poster & Print
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Creating striking layouts and compositions for events, campaigns, and exhibitions.
+                Designing high-impact layouts and compositions tailored for events, campus campaigns, and digital promotion.
               </p>
             </div>
             {/* Card 2 */}
@@ -139,18 +138,16 @@ export default async function Home() {
                 Logo Design
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Developing cohesive, scalable visual languages that define a
-                brand's essence.
+                Crafting distinct logos and app icons that give a brand a sharp, recognizable digital presence.
               </p>
             </div>
             {/* Card 3 */}
             <div className="p-8 border rounded-full border-outline-variant bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-transform duration-300">
               <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest">
-                Digital Design
+                Graphic Design
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Crafting sophisticated digital experiences focusing on clarity and
-                aesthetic quality.
+                Creating clean, purpose-driven visuals that focus on strong typography, structured layouts, and geometric clarity.
               </p>
             </div>
           </div>
@@ -160,7 +157,7 @@ export default async function Home() {
         <WorksGallery images={imagesWithCategories} />
 
         {/* Contact Section */}
-        <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start" id="contact">
+        <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start scroll-mt-32" id="contact">
           <div className="md:col-span-4 space-y-6 pr-0 md:pr-12">
             <ScrollReveal>
               <h2 className="font-headline-md text-headline-md text-primary">
@@ -200,7 +197,6 @@ export default async function Home() {
           </div>
         </section>
       </main>
-      <Footer />
     </>
   );
 }
