@@ -2,22 +2,11 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
-import WorksGallery, { WorkImage, Category } from "@/components/WorksGallery";
-import { supabase } from "@/utils/supabase";
+import WorksGallery from "@/components/WorksGallery";
+import { getWorkImages } from "@/data/works";
 
-export const revalidate = 60; // Revalidate every 60 seconds
-
-export default async function Home() {
-  const { data: works } = await supabase
-    .from("works")
-    .select("*")
-    .order("priority", { ascending: true, nullsFirst: false });
-
-  const imagesWithCategories: WorkImage[] = (works || []).map((work: any) => ({
-    src: supabase.storage.from("portfolio-assets").getPublicUrl(work.file_name).data.publicUrl,
-    category: work.category as Category,
-    title: work.file_name.replace(/\.[^/.]+$/, ""),
-  }));
+export default function Home() {
+  const imagesWithCategories = getWorkImages();
 
   const CONTACT_LINKS = [
     {
