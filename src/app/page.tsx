@@ -54,12 +54,12 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="flex-grow w-full px-margin-mobile md:px-margin-desktop pt-8 pb-16 md:pt-16 md:pb-24 lg:py-14 max-w-container-max mx-auto space-y-section-gap">
+      <main className="flex-grow w-full px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 max-w-[1600px] mx-auto pt-8 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28 space-y-24 md:space-y-32 lg:space-y-40">
 
-        {/* Hero / Bio Section: Asymmetric Grid */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center scroll-mt-32" id="about">
+        {/* Hero / Bio Section */}
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center scroll-mt-28" id="about">
           {/* Text Content */}
-          <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-12">
+          <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-6">
             <ScrollReveal>
               <div className="flex flex-col lg:block gap-6">
                 <Image
@@ -67,46 +67,46 @@ export default function Home() {
                   alt="Samir Navas Logo"
                   width={80}
                   height={80}
+                  priority
                   className="lg:hidden object-contain rounded-full self-start"
-                  unoptimized
                 />
-                <h1 className="font-headline-xl-mobile text-headline-xl-mobile md:font-headline-xl md:text-headline-xl text-primary">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.85rem] xl:text-[4.65rem] font-bold text-primary tracking-tight leading-[1.08]">
                   Crafting visual stories as a Graphic Designer & Freelancer.
                 </h1>
               </div>
             </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <div className="space-y-6 text-on-surface-variant font-body-lg text-body-lg">
+            <ScrollReveal delay={120}>
+              <div className="space-y-6 text-on-surface-variant text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl">
                 <p>
                   Hi, I'm Samir Navas. I design clean, identity-focused logos and striking posters that bridge the gap between creative concept and functional design. No fluff—just sharp visuals that do the talking.
                 </p>
               </div>
             </ScrollReveal>
             {/* Categories/Tags */}
-            <ScrollReveal delay={400}>
-              <div className="flex flex-wrap gap-3 pt-4">
-                <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
+            <ScrollReveal delay={240}>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <span className="px-5 py-2.5 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary bg-surface-container-lowest shadow-xs uppercase tracking-wider font-medium">
                   Posters
                 </span>
-                <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
+                <span className="px-5 py-2.5 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary bg-surface-container-lowest shadow-xs uppercase tracking-wider font-medium">
                   Logos
                 </span>
-                <span className="px-4 py-2 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary">
+                <span className="px-5 py-2.5 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary bg-surface-container-lowest shadow-xs uppercase tracking-wider font-medium">
                   Graphic Design
                 </span>
               </div>
             </ScrollReveal>
           </div>
           {/* Image Container */}
-          <div className="hidden lg:block lg:col-span-5 mt-12 lg:mt-0 relative group">
-            <div className="relative w-full aspect-square overflow-hidden">
+          <div className="hidden lg:flex lg:col-span-5 justify-end items-center mt-12 lg:mt-0">
+            <div className="relative w-full max-w-[460px] xl:max-w-[500px] aspect-square overflow-hidden rounded-3xl bg-surface-container-low border border-outline-variant shadow-sm">
               <Image
                 src="/logo.png"
                 alt="Samir Navas"
                 fill
                 priority
-                unoptimized
-                className="object-cover transition-all duration-700"
+                sizes="(max-width: 1024px) 100vw, (max-width: 1600px) 40vw, 500px"
+                className="object-cover transform-gpu backface-hidden"
               />
             </div>
           </div>
@@ -115,40 +115,52 @@ export default function Home() {
         {/* Expertise / Services Section */}
         <section>
           <ScrollReveal>
-            <div className="mb-12 border-b border-outline-variant pb-4">
-              <h2 className="font-headline-md text-headline-md text-primary">
+            <div className="mb-10 md:mb-14 border-b border-outline-variant pb-4">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary tracking-tight">
                 Capabilities
               </h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* Card 1 */}
-            <div className="p-8 border rounded-full border-outline-variant bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-transform duration-300">
-              <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest">
-                Poster & Print
-              </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
-                Designing high-impact layouts and compositions tailored for events, campus campaigns, and digital promotion.
-              </p>
-            </div>
+            <ScrollReveal delay={100}>
+              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 transform-gpu will-change-transform h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
+                    Poster & Print
+                  </h3>
+                  <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
+                    Designing high-impact layouts and compositions tailored for events, campus campaigns, and digital promotion.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
             {/* Card 2 */}
-            <div className="p-8 border rounded-full border-outline-variant bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-transform duration-300">
-              <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest">
-                Logo Design
-              </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
-                Crafting distinct logos and app icons that give a brand a sharp, recognizable digital presence.
-              </p>
-            </div>
+            <ScrollReveal delay={200}>
+              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 transform-gpu will-change-transform h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
+                    Logo Design
+                  </h3>
+                  <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
+                    Crafting distinct logos and app icons that give a brand a sharp, recognizable digital presence.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
             {/* Card 3 */}
-            <div className="p-8 border rounded-full border-outline-variant bg-surface-container-lowest shadow-[0px_4px_20px_rgba(0,0,0,0.02)] hover:-translate-y-1 transition-transform duration-300">
-              <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest">
-                Graphic Design
-              </h3>
-              <p className="font-body-md text-body-md text-on-surface-variant">
-                Creating clean, purpose-driven visuals that focus on strong typography, structured layouts, and geometric clarity.
-              </p>
-            </div>
+            <ScrollReveal delay={300}>
+              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 transform-gpu will-change-transform h-full flex flex-col justify-between">
+                <div>
+                  <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
+                    Graphic Design
+                  </h3>
+                  <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
+                    Creating clean, purpose-driven visuals that focus on strong typography, structured layouts, and geometric clarity.
+                  </p>
+                </div>
+              </div>
+            </ScrollReveal>
           </div>
         </section>
 
@@ -156,46 +168,65 @@ export default function Home() {
         <WorksGallery images={imagesWithCategories} />
 
         {/* Contact Section */}
-        <section className="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start scroll-mt-32" id="contact">
-          <div className="md:col-span-4 space-y-6 pr-0 md:pr-12">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start scroll-mt-28" id="contact">
+          <div className="lg:col-span-4 space-y-6 pr-0 lg:pr-6">
             <ScrollReveal>
-              <h2 className="font-headline-md text-headline-md text-primary">
+              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary tracking-tight">
                 Let's work together.
               </h2>
             </ScrollReveal>
-            <ScrollReveal delay={200}>
-              <p className="font-body-md text-body-md text-on-surface-variant">
+            <ScrollReveal delay={150}>
+              <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
                 Available for freelance opportunities. Connect with me directly through any of these platforms.
               </p>
             </ScrollReveal>
           </div>
-          <div className="md:col-span-8 mt-12 md:mt-0">
+          <div className="lg:col-span-8 mt-6 lg:mt-0">
             <div className="flex flex-col">
               {CONTACT_LINKS.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  target={link.name !== "Email" ? "_blank" : undefined}
-                  rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
-                  className="flex items-center justify-between py-6 border-b border-outline-variant group hover:border-primary transition-colors"
-                >
-                  <div className="flex items-center gap-6">
-                    <span className="text-primary">{link.icon}</span>
-                    <span className="font-headline-sm text-headline-sm md:text-2xl font-bold text-primary tracking-tight">{link.name}</span>
-                  </div>
-                  <div className="flex items-center gap-4 text-on-surface-variant group-hover:text-primary transition-colors">
-                    <span className="font-body-md text-body-md hidden sm:block">{link.value}</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="opacity-0 group-hover:opacity-100 transition-all transform group-hover:translate-x-1 group-hover:-translate-y-1">
-                      <line x1="7" y1="17" x2="17" y2="7" />
-                      <polyline points="7 7 17 7 17 17" />
-                    </svg>
-                  </div>
-                </a>
+                <ScrollReveal key={link.name} delay={index * 80}>
+                  <a
+                    href={link.href}
+                    target={link.name !== "Email" ? "_blank" : undefined}
+                    rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
+                    className="flex items-center justify-between py-6 lg:py-8 border-b border-outline-variant group hover:border-primary transition-colors duration-200 transform-gpu"
+                  >
+                    <div className="flex items-center gap-6">
+                      <span className="text-primary group-hover:scale-110 transition-transform duration-200 transform-gpu">
+                        {link.icon}
+                      </span>
+                      <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary tracking-tight">
+                        {link.name}
+                      </span>
+                    </div>
+                    <div className="flex items-center gap-4 text-on-surface-variant group-hover:text-primary transition-colors duration-200">
+                      <span className="text-sm sm:text-base lg:text-lg hidden sm:block font-medium">
+                        {link.value}
+                      </span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="22"
+                        height="22"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-1 group-hover:-translate-y-1 transform-gpu"
+                      >
+                        <line x1="7" y1="17" x2="17" y2="7" />
+                        <polyline points="7 7 17 7 17 17" />
+                      </svg>
+                    </div>
+                  </a>
+                </ScrollReveal>
               ))}
             </div>
           </div>
         </section>
       </main>
+      <Footer />
     </>
   );
 }

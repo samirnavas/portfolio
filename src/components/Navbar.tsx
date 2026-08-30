@@ -10,26 +10,26 @@ export default function Navbar() {
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
-    <header className="bg-surface dark:bg-surface w-full top-0 sticky z-50 border-b border-outline-variant dark:border-on-surface-variant">
-      <div className="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-container-max mx-auto">
+    <header className="bg-surface/90 backdrop-blur-md w-full top-0 sticky z-50 border-b border-outline-variant transition-colors">
+      <div className="flex justify-between items-center w-full px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 max-w-[1600px] mx-auto py-5 md:py-6">
         {/* Brand */}
         <Link
-          className="font-headline-md text-headline-md font-bold text-primary dark:text-on-surface tracking-tighter hover:opacity-80 transition-opacity duration-300 z-50"
+          className="font-headline-md text-2xl md:text-3xl font-bold text-primary tracking-tight hover:opacity-80 transition-opacity duration-200 z-50"
           href="/"
           onClick={() => setIsOpen(false)}
         >
           SAMIR NAVAS
         </Link>
         {/* Navigation Links (Desktop) */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-10">
           <a
-            className="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-sm text-label-sm hover:opacity-80"
+            className="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-sm text-label-sm uppercase tracking-wider"
             href="#about"
           >
             About
           </a>
           <a
-            className="text-on-surface-variant dark:text-on-surface-variant hover:text-primary dark:hover:text-on-surface transition-colors duration-200 font-label-sm text-label-sm hover:opacity-80"
+            className="text-on-surface-variant hover:text-primary transition-colors duration-200 font-label-sm text-label-sm uppercase tracking-wider"
             href="#work"
           >
             Works
@@ -37,13 +37,17 @@ export default function Navbar() {
         </nav>
         {/* Trailing Action (Desktop) */}
         <a
-          className="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-6 py-3 rounded-none font-label-sm text-label-sm hover:opacity-80 transition-opacity duration-300"
+          className="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-7 py-3 font-label-sm text-label-sm uppercase tracking-wider hover:opacity-85 transition-all duration-200 transform-gpu active:scale-95 shadow-xs"
           href="#contact"
         >
           Let's Talk
         </a>
         {/* Mobile Menu Toggle */}
-        <button className="md:hidden text-primary p-2 z-50 relative" onClick={toggleMenu} aria-label="Toggle Menu">
+        <button
+          className="md:hidden text-primary p-2 z-50 relative cursor-pointer"
+          onClick={toggleMenu}
+          aria-label="Toggle Menu"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="24"
@@ -54,7 +58,7 @@ export default function Navbar() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="transition-transform duration-300"
+            className="transition-transform duration-200"
           >
             {isOpen ? (
               <>
@@ -76,10 +80,11 @@ export default function Navbar() {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, y: -20 }}
+            initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            className="absolute top-full left-0 w-full bg-surface dark:bg-surface border-b border-outline-variant shadow-lg md:hidden flex flex-col items-center py-8 gap-6 z-40"
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
+            className="absolute top-full left-0 w-full bg-surface/95 backdrop-blur-lg border-b border-outline-variant shadow-lg md:hidden flex flex-col items-center py-8 gap-6 z-40"
           >
             <a
               className="text-on-surface-variant hover:text-primary transition-colors duration-200 font-headline-sm text-headline-sm"
@@ -96,7 +101,7 @@ export default function Navbar() {
               Works
             </a>
             <a
-              className="bg-primary text-on-primary px-8 py-3 rounded-none font-label-sm text-label-sm hover:opacity-80 transition-opacity duration-300 mt-4"
+              className="bg-primary text-on-primary px-8 py-3 font-label-sm text-label-sm hover:opacity-85 transition-opacity duration-200 mt-4 uppercase tracking-wider"
               href="#contact"
               onClick={() => setIsOpen(false)}
             >
