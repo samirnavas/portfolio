@@ -59,11 +59,12 @@ export default function Loading() {
               <div className="h-5 w-20 bg-surface-container-highest rounded"></div>
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
-            {[...Array(8)].map((_, i) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 items-start">
+            {[1.25, 1.33, 1.33, 1.25, 1.25, 1.41, 1, 1].map((ratio, i) => (
               <div
                 key={i}
-                className="aspect-[3/4] bg-surface-container-highest rounded-2xl md:rounded-3xl"
+                style={{ aspectRatio: `${ratio}` }}
+                className="bg-surface-container-highest rounded-2xl md:rounded-3xl"
               ></div>
             ))}
           </div>

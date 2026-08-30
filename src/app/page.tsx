@@ -99,7 +99,7 @@ export default function Home() {
           </div>
           {/* Image Container */}
           <div className="hidden lg:flex lg:col-span-5 justify-end items-center mt-12 lg:mt-0">
-            <div className="relative w-full max-w-[460px] xl:max-w-[500px] aspect-square overflow-hidden rounded-3xl bg-surface-container-low border border-outline-variant shadow-sm">
+            <div className="relative w-full max-w-[460px] xl:max-w-[500px] aspect-square overflow-hidden rounded-3xl">
               <Image
                 src="/logo.png"
                 alt="Samir Navas"
