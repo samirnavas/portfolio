@@ -56,59 +56,107 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow w-full px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 max-w-[1600px] mx-auto pt-8 pb-16 md:pt-14 md:pb-24 lg:pt-16 lg:pb-28 space-y-24 md:space-y-32 lg:space-y-40">
 
+        {/* SVG Filter for Distressed / Grunge Brush Borders */}
+        <svg className="absolute w-0 h-0 pointer-events-none opacity-0" aria-hidden="true" style={{ position: 'absolute', width: 0, height: 0 }}>
+          <defs>
+            <filter id="grunge-filter-1" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.04 0.18" numOctaves="4" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="5.5" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <filter id="grunge-filter-2" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.045 0.16" numOctaves="4" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="6" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <filter id="grunge-filter-3" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.038 0.17" numOctaves="4" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="5" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+            <filter id="grunge-filter-4" x="-20%" y="-20%" width="140%" height="140%">
+              <feTurbulence type="fractalNoise" baseFrequency="0.048 0.19" numOctaves="4" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="5.8" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+          </defs>
+        </svg>
+
         {/* Hero / Bio Section */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center scroll-mt-28" id="about">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 pt-2 sm:pt-4" id="about">
           {/* Text Content */}
-          <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-6">
+          <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-2">
             <ScrollReveal>
-              <div className="flex flex-col lg:block gap-6">
-                <Image
-                  src="/logo.png"
-                  alt="Samir Navas Logo"
-                  width={80}
-                  height={80}
-                  priority
-                  className="lg:hidden object-contain rounded-full self-start"
-                />
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[3.85rem] xl:text-[4.65rem] font-bold text-primary tracking-tight leading-[1.08]">
-                  Crafting visual stories as a Graphic Designer & Freelancer.
-                </h1>
-              </div>
+              <h1 className="flex flex-col items-start select-none text-xl min-[400px]:text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-[3rem] font-semibold tracking-tight">
+                {/* Line 1 */}
+                <div className="relative inline-flex items-center -rotate-[2.75deg] origin-left z-10 translate-x-[90px] translate-y-[0px]">
+                  <span
+                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
+                    style={{ filter: "url(#grunge-filter-1)" }}
+                    aria-hidden="true"
+                  />
+                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                    Crafting visual
+                  </span>
+                </div>
+
+                {/* Line 2 */}
+                <div className="relative inline-flex items-center -rotate-[-3.27deg] origin-left z-20 translate-x-[0px] translate-y-[0px]">
+                  <span
+                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
+                    style={{ filter: "url(#grunge-filter-2)" }}
+                    aria-hidden="true"
+                  />
+                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                    stories as a Graphic
+                  </span>
+                </div>
+
+                {/* Line 3 */}
+                <div className="relative inline-flex items-center -rotate-[1.65deg] origin-left z-30 translate-x-[50px] translate-y-[25px]">
+                  <span
+                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
+                    style={{ filter: "url(#grunge-filter-3)" }}
+                    aria-hidden="true"
+                  />
+                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                    Designer &
+                  </span>
+                </div>
+
+                {/* Line 4 */}
+                <div className="relative inline-flex items-center -rotate-[-3.94deg] origin-left z-20 translate-x-[100px] translate-y-[22px]">
+                  <span
+                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
+                    style={{ filter: "url(#grunge-filter-4)" }}
+                    aria-hidden="true"
+                  />
+                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                    Freelancer
+                  </span>
+                </div>
+              </h1>
             </ScrollReveal>
+
             <ScrollReveal delay={120}>
-              <div className="space-y-6 text-on-surface-variant text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl">
+              <div className="pt-2 text-neutral-800 text-base justify sm:text-lg lg:text-[1.12rem] translate-y-[30px] font-medium leading-[1.65] max-w-xl">
                 <p>
                   Hi, I&apos;m Samir Navas. I design clean, identity-focused logos and striking posters that bridge the gap between creative concept and functional design. No fluff—just sharp visuals that do the talking.
                 </p>
               </div>
             </ScrollReveal>
-            {/* Categories/Tags */}
-            <ScrollReveal delay={240}>
-              <div className="flex flex-wrap gap-3 pt-2">
-                <span className="px-5 py-2.5 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary bg-surface-container-lowest shadow-xs uppercase tracking-wider font-medium">
-                  Posters
-                </span>
-                <span className="px-5 py-2.5 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary bg-surface-container-lowest shadow-xs uppercase tracking-wider font-medium">
-                  Logos
-                </span>
-                <span className="px-5 py-2.5 rounded-full border border-outline-variant font-label-sm text-label-sm text-primary bg-surface-container-lowest shadow-xs uppercase tracking-wider font-medium">
-                  Graphic Design
-                </span>
+          </div>
+
+          {/* Large SN Monogram Logo on Right */}
+          <div className="flex justify-center lg:justify-end items-center lg:col-span-5 mt-8 lg:mt-0">
+            <ScrollReveal delay={150}>
+              <div className="relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[440px] md:h-[440px] lg:w-[480px] lg:h-[480px] xl:w-[520px] xl:h-[520px] transition-transform duration-500 hover:scale-[1.02]">
+                <Image
+                  src="/logo.png"
+                  alt="Samir Navas Monogram"
+                  fill
+                  priority
+                  sizes="(max-width: 640px) 300px, (max-width: 1024px) 440px, 520px"
+                  className="object-contain"
+                />
               </div>
             </ScrollReveal>
-          </div>
-          {/* Image Container */}
-          <div className="hidden lg:flex lg:col-span-5 justify-end items-center mt-12 lg:mt-0">
-            <div className="relative w-full max-w-[460px] xl:max-w-[500px] aspect-square overflow-hidden rounded-3xl">
-              <Image
-                src="/logo.png"
-                alt="Samir Navas"
-                fill
-                priority
-                sizes="(max-width: 1024px) 100vw, (max-width: 1600px) 40vw, 500px"
-                className="object-cover"
-              />
-            </div>
           </div>
         </section>
 
