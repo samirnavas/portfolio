@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
 import ScrollReveal from "@/components/ScrollReveal";
 import {
   type GalleryFilter,
@@ -23,40 +22,22 @@ function WorkCard({
   img: WorkImage;
   index: number;
 }) {
-  const [isLoaded, setIsLoaded] = useState(false);
   const aspectRatio = `${img.width} / ${img.height}`;
 
   return (
-    <motion.div
-      layout="position"
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.96 }}
-      transition={{
-        duration: 0.35,
-        ease: [0.16, 1, 0.3, 1],
-      }}
-      className="w-full overflow-hidden rounded-2xl md:rounded-3xl group bg-surface-container-low border border-outline-variant shadow-sm hover:shadow-md relative transform-gpu will-change-[transform,opacity]"
+    <div
+      className="w-full overflow-hidden rounded-2xl md:rounded-3xl group bg-surface-container-low border border-outline-variant shadow-xs hover:shadow-md relative transition-shadow duration-300"
       style={{ aspectRatio }}
     >
-      {/* Skeleton Pulse matching aspect ratio */}
-      {!isLoaded && (
-        <div className="absolute inset-0 bg-surface-container animate-pulse rounded-2xl md:rounded-3xl" />
-      )}
-
       <Image
         src={img.src}
         alt={img.title}
         fill
-        loading={index < 4 ? "eager" : "lazy"}
-        priority={index < 2}
         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1600px) 25vw, 400px"
-        onLoad={() => setIsLoaded(true)}
-        className={`object-cover rounded-2xl md:rounded-3xl transition-all duration-500 ease-out transform-gpu will-change-transform group-hover:scale-[1.03] backface-hidden ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        }`}
+        priority={index < 4}
+        className="object-cover rounded-2xl md:rounded-3xl transition-transform duration-300 ease-out group-hover:scale-[1.02]"
       />
-    </motion.div>
+    </div>
   );
 }
 
@@ -67,9 +48,10 @@ export default function WorksGallery({ images }: WorksGalleryProps) {
 
   useEffect(() => {
     const updateColumns = () => {
-      if (window.innerWidth < 640) {
+      const width = window.innerWidth;
+      if (width < 640) {
         setNumColumns(2);
-      } else if (window.innerWidth < 1024) {
+      } else if (width < 1024) {
         setNumColumns(3);
       } else {
         setNumColumns(4);
@@ -77,7 +59,7 @@ export default function WorksGallery({ images }: WorksGalleryProps) {
     };
 
     updateColumns();
-    window.addEventListener("resize", updateColumns);
+    window.addEventListener("resize", updateColumns, { passive: true });
     return () => window.removeEventListener("resize", updateColumns);
   }, []);
 
@@ -110,22 +92,11 @@ export default function WorksGallery({ images }: WorksGalleryProps) {
                   onClick={() => setActiveCategory(category)}
                   className={`relative font-label-sm text-sm md:text-base pb-3 font-medium transition-colors duration-200 cursor-pointer uppercase tracking-wider ${
                     isActive
-                      ? "text-primary font-semibold"
+                      ? "text-primary font-semibold border-b-2 border-primary -mb-[2px]"
                       : "text-on-surface-variant hover:text-primary"
                   }`}
                 >
                   {category}
-                  {isActive && (
-                    <motion.div
-                      layoutId="activeFilterIndicator"
-                      className="absolute bottom-0 left-0 right-0 h-[2px] bg-primary rounded-full"
-                      transition={{
-                        type: "spring",
-                        stiffness: 400,
-                        damping: 35,
-                      }}
-                    />
-                  )}
                 </button>
               );
             })}
@@ -133,18 +104,16 @@ export default function WorksGallery({ images }: WorksGalleryProps) {
         </div>
       </ScrollReveal>
 
-      {/* 4-column column-wise layout with zero vertical gaps and preserved left-to-right order */}
-      <div className="flex gap-4 sm:gap-6 lg:gap-8 items-start w-full transform-gpu">
+      {/* 4-column column-wise layout with zero vertical gaps */}
+      <div className="flex gap-4 sm:gap-6 lg:gap-8 items-start w-full">
         {columns.map((colImages, colIndex) => (
           <div
             key={colIndex}
             className="flex-1 flex flex-col gap-4 sm:gap-6 lg:gap-8"
           >
-            <AnimatePresence mode="sync">
-              {colImages.map((img, index) => (
-                <WorkCard key={img.id} img={img} index={index} />
-              ))}
-            </AnimatePresence>
+            {colImages.map((img, index) => (
+              <WorkCard key={img.id} img={img} index={index} />
+            ))}
           </div>
         ))}
       </div>

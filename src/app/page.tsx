@@ -78,7 +78,7 @@ export default function Home() {
             <ScrollReveal delay={120}>
               <div className="space-y-6 text-on-surface-variant text-base sm:text-lg lg:text-xl font-normal leading-relaxed max-w-2xl">
                 <p>
-                  Hi, I'm Samir Navas. I design clean, identity-focused logos and striking posters that bridge the gap between creative concept and functional design. No fluff—just sharp visuals that do the talking.
+                  Hi, I&apos;m Samir Navas. I design clean, identity-focused logos and striking posters that bridge the gap between creative concept and functional design. No fluff—just sharp visuals that do the talking.
                 </p>
               </div>
             </ScrollReveal>
@@ -106,7 +106,7 @@ export default function Home() {
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, (max-width: 1600px) 40vw, 500px"
-                className="object-cover transform-gpu backface-hidden"
+                className="object-cover"
               />
             </div>
           </div>
@@ -124,7 +124,7 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             {/* Card 1 */}
             <ScrollReveal delay={100}>
-              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 transform-gpu will-change-transform h-full flex flex-col justify-between">
+              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 h-full flex flex-col justify-between">
                 <div>
                   <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
                     Poster & Print
@@ -137,7 +137,7 @@ export default function Home() {
             </ScrollReveal>
             {/* Card 2 */}
             <ScrollReveal delay={200}>
-              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 transform-gpu will-change-transform h-full flex flex-col justify-between">
+              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 h-full flex flex-col justify-between">
                 <div>
                   <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
                     Logo Design
@@ -150,7 +150,7 @@ export default function Home() {
             </ScrollReveal>
             {/* Card 3 */}
             <ScrollReveal delay={300}>
-              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 transform-gpu will-change-transform h-full flex flex-col justify-between">
+              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 h-full flex flex-col justify-between">
                 <div>
                   <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
                     Graphic Design
@@ -172,7 +172,7 @@ export default function Home() {
           <div className="lg:col-span-4 space-y-6 pr-0 lg:pr-6">
             <ScrollReveal>
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary tracking-tight">
-                Let's work together.
+                Let&apos;s work together.
               </h2>
             </ScrollReveal>
             <ScrollReveal delay={150}>
@@ -189,10 +189,10 @@ export default function Home() {
                     href={link.href}
                     target={link.name !== "Email" ? "_blank" : undefined}
                     rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
-                    className="flex items-center justify-between py-6 lg:py-8 border-b border-outline-variant group hover:border-primary transition-colors duration-200 transform-gpu"
+                    className="flex items-center justify-between py-6 lg:py-8 border-b border-outline-variant group hover:border-primary transition-colors duration-200"
                   >
                     <div className="flex items-center gap-6">
-                      <span className="text-primary group-hover:scale-110 transition-transform duration-200 transform-gpu">
+                      <span className="text-primary group-hover:scale-110 transition-transform duration-200">
                         {link.icon}
                       </span>
                       <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary tracking-tight">
@@ -213,7 +213,7 @@ export default function Home() {
                         strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-1 group-hover:-translate-y-1 transform-gpu"
+                        className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-1 group-hover:-translate-y-1"
                       >
                         <line x1="7" y1="17" x2="17" y2="7" />
                         <polyline points="7 7 17 7 17 17" />

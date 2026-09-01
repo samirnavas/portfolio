@@ -35,12 +35,11 @@ export default function Navbar() {
             Works
           </a>
         </nav>
-        {/* Trailing Action (Desktop) */}
         <a
-          className="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-7 py-3 font-label-sm text-label-sm uppercase tracking-wider hover:opacity-85 transition-all duration-200 transform-gpu active:scale-95 shadow-xs"
+          className="hidden md:inline-flex items-center justify-center bg-primary text-on-primary px-7 py-3 font-label-sm text-label-sm uppercase tracking-wider hover:opacity-85 transition-all duration-200 active:scale-95 shadow-xs"
           href="#contact"
         >
-          Let's Talk
+          Let&apos;s Talk
         </a>
         {/* Mobile Menu Toggle */}
         <button
@@ -105,7 +104,7 @@ export default function Navbar() {
               href="#contact"
               onClick={() => setIsOpen(false)}
             >
-              Let's Talk
+              Let&apos;s Talk
             </a>
           </motion.div>
         )}

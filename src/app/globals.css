@@ -8,22 +8,13 @@ html.lenis, html.lenis body {
   scroll-behavior: auto !important;
 }
 
-.lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
-}
-
 .lenis.lenis-stopped {
   overflow: hidden;
-}
-
-.lenis.lenis-smooth iframe {
-  pointer-events: none;
 }
 
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
 }
 
 @theme {
@@ -133,25 +124,13 @@ html.lenis, html.lenis body {
 }
 
 @layer utilities {
-  .transform-gpu {
-    transform: translate3d(0, 0, 0);
-    backface-visibility: hidden;
-    perspective: 1000px;
-  }
-  .backface-hidden {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
   .portfolio-overlay {
     transition-property: opacity;
     transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
-    transition-duration: 400ms;
+    transition-duration: 300ms;
   }
   .portfolio-item:hover .portfolio-overlay {
     opacity: 1;
-  }
-  .portfolio-item:hover img {
-    transform: scale(1.02);
   }
   .hover-pastel-overlay {
     background-color: rgba(244, 240, 239, 0.95);
