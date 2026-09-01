@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Hanken_Grotesk } from "next/font/google";
 import SmoothScroll from "@/components/SmoothScroll";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 const geist = Geist({
@@ -32,6 +33,7 @@ export default function RootLayout({
     >
       <body className="bg-surface text-on-surface min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary selection:text-on-primary">
         <SmoothScroll>{children}</SmoothScroll>
+        <SpeedInsights />
       </body>
     </html>
   );
