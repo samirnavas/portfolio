@@ -53,7 +53,7 @@ export default function ScrollReveal({
   return (
     <div
       ref={ref}
-      className={`${className} transition-all duration-500 ease-out ${
+      className={`${className} transition-[opacity,transform] duration-500 ease-out ${
         isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-3"
       }`}
       style={{

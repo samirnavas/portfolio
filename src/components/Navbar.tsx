@@ -2,7 +2,6 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -76,39 +75,35 @@ export default function Navbar() {
       </div>
 
       {/* Mobile Menu Overlay */}
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, y: -10 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -10 }}
-            transition={{ duration: 0.2, ease: "easeOut" }}
-            className="absolute top-full left-0 w-full bg-surface/95 backdrop-blur-lg border-b border-outline-variant shadow-lg md:hidden flex flex-col items-center py-8 gap-6 z-40"
-          >
-            <a
-              className="text-on-surface-variant hover:text-primary transition-colors duration-200 font-headline-sm text-headline-sm"
-              href="#about"
-              onClick={() => setIsOpen(false)}
-            >
-              About
-            </a>
-            <a
-              className="text-on-surface-variant hover:text-primary transition-colors duration-200 font-headline-sm text-headline-sm"
-              href="#work"
-              onClick={() => setIsOpen(false)}
-            >
-              Works
-            </a>
-            <a
-              className="bg-primary text-on-primary px-8 py-3 font-label-sm text-label-sm hover:opacity-85 transition-opacity duration-200 mt-4 uppercase tracking-wider"
-              href="#contact"
-              onClick={() => setIsOpen(false)}
-            >
-              Let&apos;s Talk
-            </a>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div
+        className={`absolute top-full left-0 w-full bg-surface/95 backdrop-blur-lg border-b border-outline-variant shadow-lg md:hidden flex flex-col items-center py-8 gap-6 z-40 transition-all duration-200 ease-out ${
+          isOpen
+            ? "opacity-100 translate-y-0 pointer-events-auto"
+            : "opacity-0 -translate-y-2 pointer-events-none"
+        }`}
+      >
+        <a
+          className="text-on-surface-variant hover:text-primary transition-colors duration-200 font-headline-sm text-headline-sm"
+          href="#about"
+          onClick={() => setIsOpen(false)}
+        >
+          About
+        </a>
+        <a
+          className="text-on-surface-variant hover:text-primary transition-colors duration-200 font-headline-sm text-headline-sm"
+          href="#work"
+          onClick={() => setIsOpen(false)}
+        >
+          Works
+        </a>
+        <a
+          className="bg-primary text-on-primary px-8 py-3 font-label-sm text-label-sm hover:opacity-85 transition-opacity duration-200 mt-4 uppercase tracking-wider"
+          href="#contact"
+          onClick={() => setIsOpen(false)}
+        >
+          Let&apos;s Talk
+        </a>
+      </div>
     </header>
   );
 }

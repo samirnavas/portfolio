@@ -17,10 +17,8 @@ const GALLERY_FILTERS = getGalleryFilters();
 
 function WorkCard({
   img,
-  index,
 }: {
   img: WorkImage;
-  index: number;
 }) {
   const aspectRatio = `${img.width} / ${img.height}`;
 
@@ -34,7 +32,6 @@ function WorkCard({
         alt={img.title}
         fill
         sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, (max-width: 1600px) 25vw, 400px"
-        priority={index < 4}
         className="object-cover rounded-2xl md:rounded-3xl transition-transform duration-300 ease-out group-hover:scale-[1.02]"
       />
     </div>
@@ -111,8 +108,8 @@ export default function WorksGallery({ images }: WorksGalleryProps) {
             key={colIndex}
             className="flex-1 flex flex-col gap-4 sm:gap-6 lg:gap-8"
           >
-            {colImages.map((img, index) => (
-              <WorkCard key={img.id} img={img} index={index} />
+            {colImages.map((img) => (
+              <WorkCard key={img.id} img={img} />
             ))}
           </div>
         ))}
