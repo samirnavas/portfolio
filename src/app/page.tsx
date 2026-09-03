@@ -15,7 +15,7 @@ export default function Home() {
       value: "samirnavas7662@gmail.com",
       href: "mailto:samirnavas7662@gmail.com",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>
       )
     },
     {
@@ -23,15 +23,7 @@ export default function Home() {
       value: "+91 9446 583 084",
       href: "https://wa.me/919446583084",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="black" stroke="currentColor" strokeWidth="0" strokeLinecap="round" strokeLinejoin="round"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" /></svg>
-      )
-    },
-    {
-      name: "LinkedIn",
-      value: "linkedin.com/in/samirnavas",
-      href: "https://www.linkedin.com/in/samir-navas-a6128633b",
-      icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect width="4" height="12" x="2" y="9" /><circle cx="4" cy="4" r="2" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z" /><path d="M9.5 9.5a1.2 1.2 0 0 1 1.2-.2l.6 1.4c.1.3 0 .6-.2.8l-.3.3a4.8 4.8 0 0 0 2.2 2.2l.3-.3c.2-.2.5-.3.8-.2l1.4.6c.3.1.4.4.3.7a1.6 1.6 0 0 1-1.6 1.2c-2.4 0-4.7-2.3-4.7-4.7 0-.7.3-1.4 1-1.8z" fill="currentColor" stroke="none" /></svg>
       )
     },
     {
@@ -39,7 +31,7 @@ export default function Home() {
       value: "@samirnavas",
       href: "https://x.com/SamirNavas24938",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" /></svg>
       )
     },
     {
@@ -47,7 +39,7 @@ export default function Home() {
       value: "@samirnavas",
       href: "https://instagram.com/_samirnavas_",
       icon: (
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /><line x1="17.5" x2="17.51" y1="6.5" y2="6.5" /></svg>
       )
     }
   ];
@@ -153,7 +145,7 @@ export default function Home() {
             </ScrollReveal>
 
             <ScrollReveal delay={120}>
-              <div className="pt-2 sm:pt-4 text-neutral-800 text-[15px] sm:text-lg lg:text-[1.12rem] translate-y-[12px] sm:translate-y-[20px] lg:translate-y-[30px] font-medium leading-[1.65] max-w-xl">
+              <div className="pt-2 sm:pt-4 text-neutral-800 text-[15px] sm:text-lg lg:text-[1.12rem] text-justify translate-y-[12px] sm:translate-y-[20px] lg:translate-y-[30px] font-medium leading-[1.65] max-w-xl">
                 <p>
                   Hi, I&apos;m Samir Navas. I design clean, identity-focused logos and striking posters that bridge the gap between creative concept and functional design. No fluff—just sharp visuals that do the talking.
                 </p>
@@ -196,61 +188,56 @@ export default function Home() {
         <WorksGallery images={imagesWithCategories} />
 
         {/* Contact Section */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start scroll-mt-28" id="contact">
-          <div className="lg:col-span-4 space-y-6 pr-0 lg:pr-6">
-            <ScrollReveal>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary tracking-tight">
-                Let&apos;s work together.
-              </h2>
-            </ScrollReveal>
-            <ScrollReveal delay={150}>
-              <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
-                Available for freelance opportunities. Connect with me directly through any of these platforms.
-              </p>
-            </ScrollReveal>
-          </div>
-          <div className="lg:col-span-8 mt-6 lg:mt-0">
-            <div className="flex flex-col">
-              {CONTACT_LINKS.map((link, index) => (
-                <ScrollReveal key={link.name} delay={index * 80}>
-                  <a
-                    href={link.href}
-                    target={link.name !== "Email" ? "_blank" : undefined}
-                    rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
-                    className="flex items-center justify-between py-6 lg:py-8 border-b border-outline-variant group hover:border-primary transition-colors duration-200"
-                  >
-                    <div className="flex items-center gap-6">
-                      <span className="text-primary group-hover:scale-110 transition-transform duration-200">
-                        {link.icon}
-                      </span>
-                      <span className="text-xl sm:text-2xl lg:text-3xl font-bold text-primary tracking-tight">
-                        {link.name}
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-4 text-on-surface-variant group-hover:text-primary transition-colors duration-200">
-                      <span className="text-sm sm:text-base lg:text-lg hidden sm:block font-medium">
-                        {link.value}
-                      </span>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="22"
-                        height="22"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        className="opacity-0 group-hover:opacity-100 transition-all duration-200 transform group-hover:translate-x-1 group-hover:-translate-y-1"
-                      >
-                        <line x1="7" y1="17" x2="17" y2="7" />
-                        <polyline points="7 7 17 7 17 17" />
-                      </svg>
-                    </div>
-                  </a>
-                </ScrollReveal>
-              ))}
-            </div>
+        <section className="scroll-mt-28" id="contact">
+          <ScrollReveal>
+            <h2 className="text-2xl sm:text-3xl md:text-[2.25rem] font-bold text-primary tracking-tight mb-8 sm:mb-10">
+              Let&apos;s work together.
+            </h2>
+          </ScrollReveal>
+
+          <div className="flex flex-col border-t border-outline-variant">
+            {CONTACT_LINKS.map((link, index) => (
+              <ScrollReveal key={link.name} delay={index * 60}>
+                <a
+                  href={link.href}
+                  target={link.name !== "Email" ? "_blank" : undefined}
+                  rel={link.name !== "Email" ? "noopener noreferrer" : undefined}
+                  className="flex items-center justify-between py-5 sm:py-6 md:py-7 border-b border-outline-variant group hover:bg-neutral-50/50 transition-colors duration-200"
+                >
+                  {/* Left: Icon + Name */}
+                  <div className="flex items-center gap-3.5 sm:gap-4.5">
+                    <span className="text-primary/90 flex items-center justify-center shrink-0">
+                      {link.icon}
+                    </span>
+                    <span className="text-lg sm:text-xl md:text-[1.35rem] font-bold text-primary tracking-tight">
+                      {link.name}
+                    </span>
+                  </div>
+
+                  {/* Right: Value + Diagonal Arrow */}
+                  <div className="flex items-center gap-1.5 sm:gap-2 text-neutral-600 group-hover:text-primary transition-colors duration-200">
+                    <span className="text-xs sm:text-sm md:text-[15px] font-medium tracking-tight">
+                      {link.value}
+                    </span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="15"
+                      height="15"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      className="shrink-0 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                    >
+                      <line x1="7" y1="17" x2="17" y2="7" />
+                      <polyline points="7 7 17 7 17 17" />
+                    </svg>
+                  </div>
+                </a>
+              </ScrollReveal>
+            ))}
           </div>
         </section>
       </main>

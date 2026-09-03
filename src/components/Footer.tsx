@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="w-full px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 max-w-[1600px] mx-auto py-14 md:py-20 flex flex-col md:flex-row justify-between items-start md:items-center gap-8">
         {/* Brand & Copyright */}
         <div className="flex flex-col gap-3">
-          <span className="text-2xl md:text-3xl font-bold text-primary tracking-tight">
+          <span className="text-2xl md:text-3xl font-bold text-primary tracking-wide">
             SAMIR NAVAS
           </span>
           <p className="font-label-sm text-label-sm text-on-surface-variant tracking-wider uppercase">
