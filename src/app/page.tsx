@@ -80,63 +80,80 @@ export default function Home() {
         </svg>
 
         {/* Hero / Bio Section */}
-        <section className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center scroll-mt-28 pt-2 sm:pt-4" id="about">
+        <section className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-14 items-center scroll-mt-28 pt-2 sm:pt-4" id="about">
           {/* Text Content */}
-          <div className="lg:col-span-7 space-y-8 pr-0 lg:pr-2">
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8 pr-0 lg:pr-2">
             <ScrollReveal>
-              <h1 className="flex flex-col items-start select-none text-xl min-[400px]:text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-[3rem] font-semibold tracking-tight">
-                {/* Line 1 */}
-                <div className="relative inline-flex items-center -rotate-[2.75deg] origin-left z-10 translate-x-[90px] translate-y-[0px]">
-                  <span
-                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
-                    style={{ filter: "url(#grunge-filter-1)" }}
-                    aria-hidden="true"
-                  />
-                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
-                    Crafting visual
-                  </span>
-                </div>
+              {/* Header area: On mobile (< lg), heading and small logo are side-by-side */}
+              <div className="flex items-center justify-between gap-3 min-[400px]:gap-5 sm:gap-8">
+                <h1 className="flex flex-col items-start select-none text-[1.1rem] min-[360px]:text-[1.22rem] min-[400px]:text-[1.38rem] min-[480px]:text-2xl sm:text-3xl md:text-4xl lg:text-[2.6rem] xl:text-[3rem] font-semibold tracking-tight shrink-0">
+                  {/* Line 1 */}
+                  <div className="relative inline-flex items-center -rotate-[2.75deg] origin-left z-10 translate-x-[16px] min-[400px]:translate-x-[26px] sm:translate-x-[48px] lg:translate-x-[90px] translate-y-0">
+                    <span
+                      className="absolute -inset-x-2.5 sm:-inset-x-5 -inset-y-0.5 sm:-inset-y-1.5 bg-black"
+                      style={{ filter: "url(#grunge-filter-1)" }}
+                      aria-hidden="true"
+                    />
+                    <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                      Crafting visual
+                    </span>
+                  </div>
 
-                {/* Line 2 */}
-                <div className="relative inline-flex items-center -rotate-[-3.27deg] origin-left z-20 translate-x-[0px] translate-y-[0px]">
-                  <span
-                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
-                    style={{ filter: "url(#grunge-filter-2)" }}
-                    aria-hidden="true"
-                  />
-                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
-                    stories as a Graphic
-                  </span>
-                </div>
+                  {/* Line 2 */}
+                  <div className="relative inline-flex items-center -rotate-[-3.27deg] origin-left z-20 translate-x-0 translate-y-0">
+                    <span
+                      className="absolute -inset-x-2.5 sm:-inset-x-5 -inset-y-0.5 sm:-inset-y-1.5 bg-black"
+                      style={{ filter: "url(#grunge-filter-2)" }}
+                      aria-hidden="true"
+                    />
+                    <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                      stories as a Graphic
+                    </span>
+                  </div>
 
-                {/* Line 3 */}
-                <div className="relative inline-flex items-center -rotate-[1.65deg] origin-left z-30 translate-x-[50px] translate-y-[25px]">
-                  <span
-                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
-                    style={{ filter: "url(#grunge-filter-3)" }}
-                    aria-hidden="true"
-                  />
-                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
-                    Designer &
-                  </span>
-                </div>
+                  {/* Line 3 */}
+                  <div className="relative inline-flex items-center -rotate-[1.65deg] origin-left z-30 translate-x-[12px] min-[400px]:translate-x-[18px] sm:translate-x-[30px] lg:translate-x-[50px] translate-y-[8px] min-[400px]:translate-y-[12px] sm:translate-y-[18px] lg:translate-y-[25px]">
+                    <span
+                      className="absolute -inset-x-2.5 sm:-inset-x-5 -inset-y-0.5 sm:-inset-y-1.5 bg-black"
+                      style={{ filter: "url(#grunge-filter-3)" }}
+                      aria-hidden="true"
+                    />
+                    <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                      Designer &
+                    </span>
+                  </div>
 
-                {/* Line 4 */}
-                <div className="relative inline-flex items-center -rotate-[-3.94deg] origin-left z-20 translate-x-[100px] translate-y-[22px]">
-                  <span
-                    className="absolute -inset-x-3.5 sm:-inset-x-5 -inset-y-1 sm:-inset-y-1.5 bg-black"
-                    style={{ filter: "url(#grunge-filter-4)" }}
-                    aria-hidden="true"
-                  />
-                  <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
-                    Freelancer
-                  </span>
+                  {/* Line 4 */}
+                  <div className="relative inline-flex items-center -rotate-[-3.94deg] origin-left z-20 translate-x-[20px] min-[400px]:translate-x-[32px] sm:translate-x-[55px] lg:translate-x-[100px] translate-y-[6px] min-[400px]:translate-y-[10px] sm:translate-y-[15px] lg:translate-y-[22px]">
+                    <span
+                      className="absolute -inset-x-2.5 sm:-inset-x-5 -inset-y-0.5 sm:-inset-y-1.5 bg-black"
+                      style={{ filter: "url(#grunge-filter-4)" }}
+                      aria-hidden="true"
+                    />
+                    <span className="relative z-10 text-white font-semibold tracking-[0px] leading-tight whitespace-nowrap px-1">
+                      Freelancer
+                    </span>
+                  </div>
+                </h1>
+
+                {/* Small SN Monogram Logo on Mobile/Tablet (to the side of heading text) */}
+                <div className="lg:hidden flex items-center justify-center shrink-0">
+                  <div className="relative w-20 h-20 min-[360px]:w-[90px] min-[360px]:h-[90px] min-[400px]:w-[105px] min-[400px]:h-[105px] min-[480px]:w-[125px] min-[480px]:h-[125px] sm:w-[155px] sm:h-[155px] md:w-[185px] md:h-[185px]">
+                    <Image
+                      src="/logo.png"
+                      alt="Samir Navas Monogram"
+                      fill
+                      priority
+                      sizes="(max-width: 480px) 110px, (max-width: 768px) 160px, (max-width: 1024px) 190px, 0px"
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
-              </h1>
+              </div>
             </ScrollReveal>
 
             <ScrollReveal delay={120}>
-              <div className="pt-2 text-neutral-800 text-base justify sm:text-lg lg:text-[1.12rem] translate-y-[30px] font-medium leading-[1.65] max-w-xl">
+              <div className="pt-2 sm:pt-4 text-neutral-800 text-[15px] sm:text-lg lg:text-[1.12rem] translate-y-[12px] sm:translate-y-[20px] lg:translate-y-[30px] font-medium leading-[1.65] max-w-xl">
                 <p>
                   Hi, I&apos;m Samir Navas. I design clean, identity-focused logos and striking posters that bridge the gap between creative concept and functional design. No fluff—just sharp visuals that do the talking.
                 </p>
@@ -144,16 +161,16 @@ export default function Home() {
             </ScrollReveal>
           </div>
 
-          {/* Large SN Monogram Logo on Right */}
-          <div className="flex justify-center lg:justify-end items-center lg:col-span-5 mt-8 lg:mt-0">
+          {/* Large SN Monogram Logo on Right (Desktop lg+ only) */}
+          <div className="hidden lg:flex justify-end items-center lg:col-span-5">
             <ScrollReveal delay={150}>
-              <div className="relative w-[300px] h-[300px] sm:w-[380px] sm:h-[380px] md:w-[440px] md:h-[440px] lg:w-[480px] lg:h-[480px] xl:w-[520px] xl:h-[520px] transition-transform duration-500 hover:scale-[1.02]">
+              <div className="relative w-[440px] h-[440px] lg:w-[480px] lg:h-[480px] xl:w-[520px] xl:h-[520px]">
                 <Image
                   src="/logo.png"
                   alt="Samir Navas Monogram"
                   fill
                   priority
-                  sizes="(max-width: 640px) 300px, (max-width: 1024px) 440px, 520px"
+                  sizes="(min-width: 1024px) 520px, 0px"
                   className="object-contain"
                 />
               </div>

@@ -13,7 +13,7 @@ export default function Navbar() {
       <div className="flex justify-between items-center w-full px-6 sm:px-10 md:px-14 lg:px-16 xl:px-20 max-w-[1600px] mx-auto py-5 md:py-6">
         {/* Brand */}
         <Link
-          className="text-2xl sm:text-[1.75rem] font-bold text-primary tracking-tight hover:opacity-80 transition-opacity duration-200 z-50 uppercase"
+          className="text-2xl sm:text-[1.75rem] font-bold text-primary tracking-wide hover:opacity-80 transition-opacity duration-200 z-50 uppercase"
           href="/"
           onClick={() => setIsOpen(false)}
         >
@@ -80,11 +80,10 @@ export default function Navbar() {
 
       {/* Mobile Menu Overlay */}
       <div
-        className={`absolute top-full left-0 w-full bg-surface/98 backdrop-blur-lg border-b border-outline-variant shadow-lg md:hidden flex flex-col items-center py-8 gap-6 z-40 transition-all duration-200 ease-out ${
-          isOpen
-            ? "opacity-100 translate-y-0 pointer-events-auto"
-            : "opacity-0 -translate-y-2 pointer-events-none"
-        }`}
+        className={`absolute top-full left-0 w-full bg-surface/98 backdrop-blur-lg border-b border-outline-variant shadow-lg md:hidden flex flex-col items-center py-8 gap-6 z-40 transition-all duration-200 ease-out ${isOpen
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 -translate-y-2 pointer-events-none"
+          }`}
       >
         <a
           className="text-on-surface-variant hover:text-primary transition-colors duration-200 text-lg font-semibold uppercase tracking-wider"
