@@ -3,6 +3,7 @@ import Footer from "@/components/Footer";
 import Image from "next/image";
 import ScrollReveal from "@/components/ScrollReveal";
 import WorksGallery from "@/components/WorksGallery";
+import CapabilitiesMarquee from "@/components/CapabilitiesMarquee";
 import { getWorkImages } from "@/data/works";
 
 export default function Home() {
@@ -160,56 +161,18 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Expertise / Services Section */}
-        <section>
+        {/* Capabilities Section */}
+        <section className="overflow-hidden">
           <ScrollReveal>
-            <div className="mb-10 md:mb-14 border-b border-outline-variant pb-4">
+            <div className="mb-6 md:mb-10 border-b border-outline-variant pb-4">
               <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-primary tracking-tight">
                 Capabilities
               </h2>
             </div>
           </ScrollReveal>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-            {/* Card 1 */}
-            <ScrollReveal delay={100}>
-              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 h-full flex flex-col justify-between">
-                <div>
-                  <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
-                    Poster & Print
-                  </h3>
-                  <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
-                    Designing high-impact layouts and compositions tailored for events, campus campaigns, and digital promotion.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-            {/* Card 2 */}
-            <ScrollReveal delay={200}>
-              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 h-full flex flex-col justify-between">
-                <div>
-                  <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
-                    Logo Design
-                  </h3>
-                  <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
-                    Crafting distinct logos and app icons that give a brand a sharp, recognizable digital presence.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-            {/* Card 3 */}
-            <ScrollReveal delay={300}>
-              <div className="p-8 lg:p-10 xl:p-12 border rounded-3xl border-outline-variant bg-surface-container-lowest shadow-[0px_4px_24px_rgba(0,0,0,0.02)] hover:-translate-y-1.5 transition-transform duration-300 h-full flex flex-col justify-between">
-                <div>
-                  <h3 className="font-label-sm text-label-sm text-primary mb-4 uppercase tracking-widest font-semibold">
-                    Graphic Design
-                  </h3>
-                  <p className="text-base lg:text-lg text-on-surface-variant leading-relaxed">
-                    Creating clean, purpose-driven visuals that focus on strong typography, structured layouts, and geometric clarity.
-                  </p>
-                </div>
-              </div>
-            </ScrollReveal>
-          </div>
+          <ScrollReveal delay={100}>
+            <CapabilitiesMarquee />
+          </ScrollReveal>
         </section>
 
         {/* Works Section */}
